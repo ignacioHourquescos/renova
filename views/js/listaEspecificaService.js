@@ -3,7 +3,10 @@ var server ="http://localhost:5000";
 
 var id=getQueryParam("id");
 function obtenerListaEspecifica (id) {
+	
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
+		alert("hola");
+		console.log("aca");
 		for(var i=0; i<data.recordsets[0].length;i++){
 			let precioConIva=data.recordsets[0][i].precio_vta*1.21;
 			data.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
