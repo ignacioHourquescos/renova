@@ -16,8 +16,6 @@ function obtenerListaEspecifica (id) {
 		  data: data.recordsets[0]
 		}); 
 	}));
-	$('#myTable > thead  > tr.precio').css('width','initial');
-	$('#myTable').css('table-layout','initial');
 }
 
 function myFunction() {
