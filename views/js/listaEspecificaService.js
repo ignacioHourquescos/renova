@@ -9,12 +9,12 @@ function obtenerListaEspecifica (id) {
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
 		console.log("aca");
 		for(var i=0; i<data.recordsets[0].length;i++){
-			let precioConIva=data.recordsets[0][i].precio_vta*1.21;
-			data.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
-			data.recordsets[0][i].precio_vta=data.recordsets[0][i].precio_vta.toFixed(0);
+			let precioConIva=data.resultado.recordsets[0][i].precio_vta*1.21;
+			data.resultado.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
+			data.resultado.recordsets[0][i].precio_vta=data.recordsets[0][i].precio_vta.toFixed(0);
 		}
 	$('table').bootstrapTable({ 
-		  data: data.recordsets[0]
+		  data: data.resutlado.recordsets[0]
 		}); 
 	}));
 }
