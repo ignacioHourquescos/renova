@@ -1,6 +1,6 @@
 // Al finalizarse de cargar el DOM:
-
-var server ="http://localhost:5000";
+var port = process.env.PORT || 8080;
+var server ="https://renovaapi.herokuapp.com";
 
 function cargarOfertas () {
 	//busca en el backend todas las ofertas
