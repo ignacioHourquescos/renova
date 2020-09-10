@@ -89,3 +89,9 @@
       white-space: normal;
     }
   }
+
+  #portfolio .intro-wrap {
+    padding: 3rem 0 0rem;
+    height:80em;
+    background:rgb(2, 0, 15);
+  }

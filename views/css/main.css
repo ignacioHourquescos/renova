@@ -2074,12 +2074,12 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #portfolio {
   background: #FFFFFF;
-  min-height: 800px;
+  min-height: 400px;
   position: relative;
   padding: 0;
 }
 #portfolio .intro-wrap {
-  padding: 15rem 0 21rem;
+  padding: 3rem 0 3rem;
   background: #111111;
 }
 #portfolio .section-intro h3 {
