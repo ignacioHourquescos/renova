@@ -20,7 +20,7 @@ function cargarOfertas () {
 			// Se coloca el nombre de cada competencia
       $(divCompetencia).find('.titulo').text(data.recordset[i].cod_articulo);
 	  $(divCompetencia).find('.detalle').text(data.recordset[i].descrip_arti);
-	  $(divCompetencia).find('.precio').text(data.recordset[i].precio_vta);
+	  $(divCompetencia).find('.precio').text((data.recordset[i].precio_vta*1.21).toFixed(0));
 			$(divCompetencia).find('.card').addClass('color'+idColor); 
       $(".competencias").append(divCompetencia);
       $(divCompetencia).find('.imagenOferta').attr("src",data.recordset[i].web_imagen);

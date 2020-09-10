@@ -9,3 +9,4 @@ function getQueryParam(param) {
     return param;
     
 }
+

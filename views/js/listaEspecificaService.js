@@ -2,8 +2,11 @@
 var server ="http://localhost:5000";
 
 var id=getQueryParam("id");
+
 function obtenerListaEspecifica (id) {
+	
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
+		console.log("aca");
 		for(var i=0; i<data.recordsets[0].length;i++){
 			let precioConIva=data.recordsets[0][i].precio_vta*1.21;
 			data.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
@@ -13,8 +16,6 @@ function obtenerListaEspecifica (id) {
 		  data: data.recordsets[0]
 		}); 
 	}));
-	$('#myTable > thead  > tr.precio').css('width','initial');
-	$('#myTable').css('table-layout','initial');
 }
 
 function myFunction() {
@@ -59,3 +60,31 @@ function myFunction() {
 
 
 obtenerListaEspecifica(id);
+
+
+// var $table = $('#myTable')
+
+//   $(function() {
+//       $table.bootstrapTable('destroy').bootstrapTable({
+//         exportDataType: $(this).val(),
+//         exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+//         columns: [
+//           {
+//             field: 'state',
+//             checkbox: true,
+//             visible: $(this).val() === 'selected'
+//           },
+//           {
+//             field: 'id',
+//             title: 'ID'
+//           }, {
+//             field: 'name',
+//             title: 'Item Name'
+//           }, {
+//             field: 'price',
+//             title: 'Item Price'
+//           }
+//         ]
+//       })
+//     }).trigger('change')
+
