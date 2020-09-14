@@ -8,12 +8,29 @@ function cargarOfertasMensuales () {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertasMensuales", function (data) {
 		for (i = 0; i < data.length; i++) {
-			var divCompetencia = $(".competenciaPlantilla").clone().removeClass("competenciaPlantilla");
+			var divCompetencia = $(".oferta").clone().removeClass("oferta");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
 			$(divCompetencia).find('.precio').text((data[i].p*1.21).toFixed(0));
 			$(divCompetencia).find('.imagenOferta').attr("src",data[i].img);
     	  	$(".ofertas").append(divCompetencia);
+		};
+		$("#plantilla").remove();
+	});
+}
+
+
+
+function cargarKits () {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasFram", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".kit").clone().removeClass("kit");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+		  	$(divCompetencia).find('.detalle').text(data[i].d);
+			$(divCompetencia).find('.precio').text((data[i].p*1.21).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".kits").append(divCompetencia);
 		};
 		$("#plantilla").remove();
 	});
@@ -55,4 +72,5 @@ function cargarOfertasMensuales () {
   
 
 cargarOfertasMensuales();
+cargarKits();
 //cargarOfertasFram();
