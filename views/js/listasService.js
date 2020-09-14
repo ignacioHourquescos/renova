@@ -13,7 +13,6 @@ function cargarListas () {
 			// Se clona la plantilla y la nueva copia ya no es una plantilla
 			var divCompetencia = $(".competenciaPlantilla").clone().removeClass("competenciaPlantilla");
 			// Se coloca el id correcto (data[i].id) de cada competencia en los links de acciones
-			console.log(data[i].codigo);
 			$(divCompetencia).find('.link').each( function(){
 				$( this ).attr("href",$( this ).attr("href")+data[i].codigo);
 			});

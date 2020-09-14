@@ -1,6 +1,6 @@
 // Al finalizarse de cargar el DOM:
-var server ="https://renovaapi.herokuapp.com";
-//var server ="http://localhost:5000";
+//var server ="https://renovaapi.herokuapp.com";
+var server ="http://localhost:5000";
 
 var id=getQueryParam("id");
 
@@ -8,15 +8,20 @@ function obtenerListaEspecifica (id) {
 	
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
 		console.log("aca");
-		for(var i=0; i<data.recordsets[0].length;i++){
+		for(var i=0; i<data.resultado.recordsets[0].length;i++){
 			let precioConIva=data.resultado.recordsets[0][i].precio_vta*1.21;
 			data.resultado.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
-			data.resultado.recordsets[0][i].precio_vta=data.recordsets[0][i].precio_vta.toFixed(0);
+			data.resultado.recordsets[0][i].precio_vta=data.resultado.recordsets[0][i].precio_vta.toFixed(0);
 		}
 	$('table').bootstrapTable({ 
-		  data: data.resutlado.recordsets[0]
+		  data: data.resultado.recordsets[0],
 		}); 
+	
+	document.getElementById("nombreLista").innerHTML=data.agrupacion;
+
 	}));
+
+
 }
 
 function myFunction() {

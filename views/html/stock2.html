@@ -6,12 +6,11 @@
   <title> Lista de precios </title> 
   <!-- css styles             --><link rel="stylesheet" type="text/css" href="../css/style.css">
   <!-- css main               --><link rel="stylesheet" type="text/css" href="../css/main.css">
-  <!-- css personal           --><link rel="stylesheet" type="text/css"href="../css/personal.css">  
-  <!-- css personal           --><link rel="stylesheet" href="../css/listaEspecificaEstilo.css">  
-  <!-- sticky header          --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
-  <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
+  <!-- css personal           --><link rel="stylesheet" href="../css/personal.css">  
+  <!-- sticky header          --><link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+  <!-- sticky header          --><link rel="stylesheet" href= "https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet">
-  <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+  <!-- sticky header          -<link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">-->
   <!-- jquery                 --><script src="../js/src/jquery.js"></script>
   <!-- helpers                --><script src="../js/src/helpers.js"></script>
   <!-- sticky header          --><script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
@@ -26,7 +25,7 @@
   <!-- fija columna 1         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js"></script>
   <!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
   <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
-  <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+  <!-- loading template       <link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">-->
 </head> 
 
 
@@ -34,47 +33,56 @@
 
 <!-- TABLA DE LISTA DE PRECIOS
 ================================================== -->
-<body> 
 
-<section class="container-fluid"  id="cabecera">
+
+<section class="container-fluid" id="portfolio" style="height:10%" style="margin:0%;padding:0%">
 	<div class="intro-wrap col-sm-12" style="height:80%;">
-      		<div class="col-sm-12"></div>
-       	 	<div class="container-fluid"><h1 id="nombreLista"></h1></div> 			
-       	 	<div class="container-fluid"><h1 id="ultimaActualizacion">Ultima actulizacion: Sep 2020</h1></div> 	 
-				<div class="container-fluid">  
-					<table	class="table-striped border-success" 
-							style="background-color:rgb(255, 255, 255)" 
-							width=100%
-							id="myTable"
-							data-buttons-class="danger"
-							data-mobile-responsive="true"
-							data-mobile-responsive="true"
-							data-search-align="left"
-							data-search="true"
-							data-show-export="true"
-							data-show-columns="true"
-							data-key-events="true"
-							data-fixed-columns="true"
-							data-show-print="true"					 
-							data-toolbar-align="left">
-						<thead class="thead-dark"> 
-							  <tr> 
-								  <th data-field="cod_articulo">  						Articulo		</span style="text-align: center;"></th> 
-								  <th data-field="descrip_arti" class="text-wrap">  						Descripcion		</span style="text-align: left;"> </th> 
-								  <th data-field="precio_vta" data-width="90" class="text-right">    		Precio sin IVA 	</span> </th>
-								  <th data-field="precio_vta_final" data-width="90"class="text-right">  	Precio con IVA 	</span> </th>  
-							  </tr> 
-						</thead> 
+    	<div class="row  section-intro  animate-this" style="justify-content: center;">
+			  <div class="col-sm-12"></div>		
+			  <h1>Stock a Controlar</h1>  		
+       	 	<p class="lead">Ultima actulizacion: Sep 2020</p>	 
+				<div class="container-fluid" style="padding:5%">  
+					<table
+					 class="table-striped border-success table-sm" 
+					 style="background-color:rgb(255, 255, 255)" 
+					 width=100%
+					 id="myTable"
+					 data-sticky-header="true"
+					 data-sticky-header-offset-right="5%"
+					 data-sticky-header-offset-left="5%"
+					 data-buttons-class="danger"
+					 data-mobile-responsive="true"
+					 data-mobile-responsive="true"
+					 data-search-align="left"
+					 data-search="true"
+					 data-show-export="true"
+					 data-show-columns="true"
+					 data-key-events="true"
+					 data-fixed-columns="true"
+					 data-show-print="true"
+					 data-toolbar-align="left"
+					 data-loading-template="loadingTemplate">
+					 <thead class="thead-dark" style="table-layout: fixed;"> 
+						<tr> 
+						  <th data-field="articulo">  Articulo</span style="text-align: center;"></th> 
+						  <th data-field="descrip_arti">  Descripcion</span> </th> 
+						  <th data-field="UM" class="precio">   UM </span> </th>
+						  <th data-field="unidades"class="precio" data-width="500" data-align="center">   unidades x mes </span> </th>  
+						  <th style="width:500px;" data-field="cant_stock"class="precio">  Stock </span> </th>  
+						</tr> 
+					  </thead> 
 					</table> 
-				</div> 
-			</div>   		
+				</div>
+		</div>  			
+	</div>   		
 </section>
 
 
 
 
 
-<script src="../js/listaEspecificaService.js"></script>
+<script src="../js/stockCriticoService.js"></script>
+
 
 </body> 
 </html>

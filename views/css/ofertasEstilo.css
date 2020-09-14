@@ -1,0 +1,36 @@
+/*////////////////////////////////////////////FONDO*/
+#cabecera{
+    background-color: black;
+    height:40em;
+}
+
+
+/*///////////////////////////////TITULO Y SIBTITULO*/
+#nombreLista{
+    color:whitesmoke;
+    padding-top:3%;
+    font-size:4em;
+}
+#ultimaActualizacion{
+    color:whitesmoke;
+    font-size:2em;
+}
+
+
+/*///////////////////////////////BARRA DE BUSQUEDA*/
+.search{
+    background-color: whitesmoke;
+    border-radius:0.5em;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .columns.columns-right.btn-group.float-right{
+      display:none;
+    }
+
+    .float-left.search.btn-group{
+        width:100%;
+    }
+  }
+

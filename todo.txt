@@ -1,0 +1,5 @@
+TODO.
+
+LISTAS.HTML
+- poner logo
+- detallar aumentos con google sheets
