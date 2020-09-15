@@ -2,7 +2,7 @@
 .cabecera{
     background-image: url(../images/fondoNaranja.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
     height:20em;
     padding-top:10em; 
     padding-bottom:20em;
@@ -11,31 +11,35 @@
 .cabecera h1{
     font-size:13vmin;
     color:white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .cabecera h2{
     font-size:4vmin;
     text-align:center;
     color:white;
+    text-shadow: 1px 1px 2px #000000;
 } 
 
 
 /*///////////////////////////////TITULO Y SIBTITULO*/
 .container-fluid #titulo{
-    color:whitesmoke;
-   
-    font-size:8vmin;
+    color:black;
+    text-decoration:underline;
+    margin-top:3vmin;
+    font-size:10vmin;
     padding-top:10vmin;
 }
 .container-fluid #subtitulo{
-    color:rgb(207, 207, 207);
+    color:rgb(128, 121, 121);
     font-size:4vmin;
     padding-bottom: 2vmin;
+    text-align:center;
 }
 
 #seccionLista{
     background-color: black;
-   margin-top:3vmin;
+  
 }
 
 /*///////////////////////////////KITS y OFERTAS */
@@ -45,6 +49,7 @@
     text-align: center;
     padding:0.4em;
     color:whitesmoke;
+    font-size: 3.5vmin;
 
 }
 
@@ -52,20 +57,23 @@
   text-align: right;
   font-size:4em;  
   color:orangered;
+  padding-top:0.25em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
 }
 
 .detalle{
    color:black;
    height:5em;  
+   text-align:center;
 }
 
 .imagenKit{
-    width:100%;
     height:30vmin;
   }
 
 .imagenOferta{
-    width:100%;
+
     height:25vmin;
 }
 
@@ -79,6 +87,14 @@
 
 .kits {
     justify-content: left;;
+}
+
+.rectanguloOferta{
+    -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    background-color: white;
+
 }
 
 /*/////////////////////////RESPONSIVE//*/
@@ -98,10 +114,12 @@
     }
 
     .precio{
-        text-align: right;
-        font-size:4em;  
-        color:green;
-      }
-      
+        font-size:3em;  
+        text-align:center;
+        padding-right: 0
+
+    }
+  
+
   }
 
