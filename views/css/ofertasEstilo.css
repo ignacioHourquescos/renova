@@ -22,7 +22,8 @@
 .container-fluid #titulo{
     color:black;
     padding-top:3vmin;
-    font-size:6vmin;
+    font-size:8vmin;
+    padding-top:10vmin;
 }
 .container-fluid #subtitulo{
     color:rgb(207, 207, 207);

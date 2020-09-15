@@ -4,6 +4,9 @@
 var server ="http://localhost:5000";
 
 
+
+
+
 function cargarOfertasMensuales () {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertasMensuales", function (data) {
@@ -17,9 +20,8 @@ function cargarOfertasMensuales () {
 		};
 		$("#plantilla").remove();
 	});
+
 }
-
-
 
 function cargarKits () {
 	//busca en el backend todas las ofertas
@@ -32,12 +34,14 @@ function cargarKits () {
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".kits").append(divCompetencia);
 		};
-		$("#plantilla").remove();
+		$("#plantilla2").remove();
 	});
 }
 
-  
+
+
+
 
 cargarOfertasMensuales();
-cargarKits();
+cargarKits(); 
 //cargarOfertasFram();

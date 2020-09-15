@@ -7,9 +7,13 @@
 		<title>Ofertas del mes</title>
 		<script src="../js/src/jquery.js"></script>
 		<script src="../js/src/helpers.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/vendor.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
     	<link rel="stylesheet" type="text/css" href="../css/main.css">
-   
+		<link rel="stylesheet" type="text/css" href="../css/ofertasEstilo.css">
+		<script src="../js/src/modernizr.js"></script>
+		<script src="../js/src/pace.min.js"></script>
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="../css/personal.css">
 	</head>
@@ -26,18 +30,18 @@
 ================================================== -->
 <header>
 	<a id="header-menu-trigger" href="#0">
-		  <span class="header-menu-text">Menu</span>
-		   <span class="header-menu-icon"></span>
+		<span class="header-menu-text">Menu</span>
+		<span class="header-menu-icon"></span>
 	</a> 
 	<nav id="menu-nav-wrap">
 		<a href="#0" class="close-button" title="close"><span>Close</span></a>	
 		<h3>Renova</h3>  
 		 <ul class="nav-list">
-			 <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-			 <li><a class="" href="#about" title="">About</a></li>
-			 <li><a class="" href="#services" title="">Services</a></li>
-			 <li><a class="" href="#portfolio" title="">Works</a></li>
-			 <li><a class="" href="listas.html" title="" style="color:orange">Ingresar a mi cuenta</a></li>						
+			 <li><a class="" href="../../index.html" 		title="">Home</a></li>
+			 <li><a class="" href="listas.html"				title="">Listas</a></li>
+			 <li><a class="" href="ofertas.html" 			title="">Ofertas</a></li>
+			 <li><a class="" href="faq.html" 				title="">Abrir un lubricentro</a></li>
+			 <li><a class="" href="resumenDeCuenta.html" 	title="" style="color:orange">Ingresar a mi cuenta</a></li>						
 		 </ul>	
 	 </nav>  <!-- end #menu-nav-wrap -->
 </header> <!-- end header -->  
@@ -45,50 +49,63 @@
 
 <!-- SECCION DE LISTAS
 ================================================== -->
-<section class="container-fluid" id="portfolio">
+<div class="container-fluid cabecera"> 
+	<h1>OFERTAS</h1>
+	<h2>Disponibles segun stock. Precios Finales.</h2>
+</div>
 
-	<div class="intro-wrap col-sm-12 " >
-		<div class="row  section-intro  animate-this">
-			<div class="col-sm-12">
-				<h1>Ofertas del mes</h1>  			
-				<p class="lead">Precios finales</p>	   			
-			</div>   		
-		</div> <!-- end row section-intro -->   		
-	</div> <!-- end intro-wrap -->
+<section class="container-fluid">
+	<div class="intro-wrap col-sm-12">
+       	<div class="container-fluid"><h1 id="titulo">COMBOS</h1>			
+       	<div class="container-fluid"><h1 id="subtitulo">Los cantidades minimas son als indicadas</h1></div> 	 
+			<div class="container-fluid">  
+				<div class="container-fluid competencias ofertas" style="justify-content: left;" >
+					<div class="row">
+					  <div class="col-sm-4 oferta" id="plantilla" style="padding:1em;">
+						  <div id="recatnguloOferta">
+							<h2 class="titulo"></h2>
+							<h5 class="detalle"></h5>
+							<img class="imagenOferta">
+							<h2 class="precio"></h2>
+						  </div>
+					 	</div>
+					</div>  
+				</div> 
+			</div>
+		</div> 
+	</div>
+</section>
 
-
-	<div class="container-fluid ofertasDelMes competencias row" style="justify-content: left;" >
-
-		  <div class="col-sm-4 competenciaPlantilla" id="plantilla" style="padding:1em;">
-			  <div class="card-body" id="recatnguloOferta" >
-				<h2 class="card-title titulo" style="color:whitesmoke"></h2>
-				<h5 class="card-text detalle" style="color:whitesmoke"></h5>
-				<img class="imagenOferta">
-				<h2 class="card-title precio" style="color:whitesmoke"></h2>
-			  </div>
-		  </div>
-	
-	</div> 
-
-	<!--Kits de fitlros Fram-->
-	
-	<div class="container-fluid  kitsFram competencias" style="justify-content: left;" >
-		<div class="row">
-		  <div class="col-sm-4 competenciaPlantilla" id="plantilla" style="padding:1em;">
-			  <div class="card-body" id="recatnguloOferta" style="background-color: #151515;;">
-				<h2 class="card-title titulo" style="color:whitesmoke"></h2>
-				<h5 class="card-text detalle" style="color:whitesmoke"></h5>
-				<img class="imagenOferta">
-				<h2 class="card-title precio" style="color:whitesmoke"></h2>
-			  </div>
-		  </div>
+ 
+	<section class="container-fluid">
+		<div class="intro-wrap col-sm-12">
+		<div class="container-fluid"><h1 id="titulo">KIT FILTROS</h1>		
+		<div class="container-fluid"><h1 id="subtitulo">condicion de pago: contado</h1></div> 	 
+			<div class="container-fluid">  
+				<div class="container-fluid  competencias kits" style="justify-content: left;" >
+					<div class="row">
+					  	<div class="col-sm-4 kit" id="plantilla2" style="padding:1em;">
+						  	<div class="recatnguloOferta">
+								<h2 class="titulo"></h2>
+								<h5 class="detalle"></h5>
+								<img class="imagenKit">
+								<h2 class="precio"></h2>
+						  	</div>
+						</div>
+					</div>  
+				</div> 
+			</div>
 		</div>  
-	</div> 
 
-</section> 
+
+
+	</div>
+</section>
 
 
 
 </body>
+<script src="../js/src/plugins.js"></script>
+<script src="../js/src/main.js"></script>
 <script src="../js/ofertasService.js"></script>
 </html>
