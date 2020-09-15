@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "montserrat-regular";
+    src: url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+body{
+    background-color: #efefef;
+}
+
 /*////////////////////////////////////////////FONDO*/
 .cabecera{
     background-image: url(../images/fondoNaranja.jpg);
@@ -12,6 +23,9 @@
     font-size:13vmin;
     color:white;
     text-shadow: 2px 2px 4px #000000;
+    font-family: "montserrat-bold", sans-serif;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
 }
 
 .cabecera h2{

@@ -1,3 +1,30 @@
+
+
+
+.cabecera{
+    background-image: url(../images/fondoNaranja.jpg);
+	background-repeat: no-repeat;
+    background-size: 100%;
+    height:15em;
+    padding-top:2em; 
+    padding-bottom:2em;
+}
+
+.cabecera h1{
+    font-size:13vmin;
+    color:white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.cabecera h2{
+    font-size:4vmin;
+    text-align:center;
+    color:white;
+    text-shadow: 1px 1px 2px #000000;
+} 
+
+
+
 /*--------- CUSTOM LAYOUT ---------*/
 
 @import url("normalize.css");
@@ -7,23 +34,10 @@
 
 body {
 	background-color: #2D3E52;
-	color: #FFF;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 22px;
-	line-height: 1.2;
-	-webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
     text-align: center;
 }
 
-h1, h2, h3, h4, p {
-    margin:0;
-    padding: 0;
-    font-weight: normal;
-    position: relative;
-    font-size: inherit;
-}
+
 
 a {
 	text-decoration: none;
@@ -33,34 +47,39 @@ a {
 	font-size: 14px;
 }
 
-a:hover {
-	text-decoration: underline;
-}
 
 /* //////////// HOME //////////// */
 /*  */
 
 .competencias {
 	max-width: 970px;
-	margin: 30px auto;
+	margin: auto;
+	margin-top:0px;
 	display: flex;
 	flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+	justify-content: center;
+	padding-top:5vmin;
+	padding-bottom:30vmin;
 }
 
 .competencias .competencia {
 	flex: 1 1 25%;
 	max-width: 25%;
 	min-width: 220px;
+	align-content: center;
+	align-items:center;
+	align-self: center;
+	justify-content: center;
 	text-align: left;
 	position: relative;
 	transition: all .25s linear;
 }
 
 .competencias .competencia .card {
+	align-content: center;
 	margin: 15px;
-	height: 290px;
+	height: 30vmin;
 	-webkit-box-shadow: 0 12px 26px -14px black;
 	   -moz-box-shadow: 0 12px 26px -14px black;
 	        box-shadow: 0 12px 26px -14px black;
@@ -76,12 +95,6 @@ a:hover {
     color:white;
 }
 
-.competencias .competencia h5 {
-	padding: 0% 10% ;
-	font-size: 14px;
-	color:white;
-}
-
 
 
 .competencias .competencia h2 a {
@@ -94,11 +107,6 @@ a:hover {
 
 
 
-.competencias .competencia .actions {
-	position: absolute;
-	bottom: 0px;
-	padding: 15px 25px 40px;
-}
 
 .competencias .competencia .actions a {
 	margin-top: 10px;
@@ -106,79 +114,9 @@ a:hover {
 }
 
 
-.competencias .competencia .card::before {
-	content: '';
-	display: block;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	width: 0;
-	height: 0;
-	border-top: 31px solid #2D3E52;
-	border-left: 31px solid rgba(0,0,0,.2);
-}
-
-.footer-actions {
-	margin: 30px 20px;
-}
-
-.footer-actions a {
-	display: block;
-	margin: 10px 0;
-}
-
 /* //////////// INNER //////////// */
 
-h1 {
-	color: #fff;
-	position: relative;
-	margin-bottom: 50px;
-	text-align: center;
-	font-size: 3px;
-}
 
-.row {
-	width: 100%;
-	position: relative;
-	margin: auto;
-}
-
-.row:after {
-	content: '';
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 30%;
-	
-	z-index: -1;
-	clear: both;
-	display: table;
-}
-
-.row .columnaPelicula {
-	float: left;
-	background-color: #FFF;
-	position: relative;
-	transition: all .25s linear;
-	-webkit-box-shadow: 0 12px 26px -14px black;
-	   -moz-box-shadow: 0 12px 26px -14px black;
-	        box-shadow: 0 12px 26px -14px black;
-}
-
-.row .columnaPelicula img {
-	width: 100%;
-}
-
-.row .columnaPelicula h3 {
-	position: static;
-	width: 80%;
-	margin: auto;
-	font-size: 14px;
-	padding: 10px 0 15px 0;
-	color: #2D3E52;
-}
 
 /*--------- COLORES --------*/
 
@@ -207,10 +145,24 @@ h1 {
 
 	.competencias .competencia .card {
 		margin: 15px 25px;
-		height: 220px;
+		height: 100px;
 	}
 	.competencias .competencia .card::before {
 		top: 15px;
 		right: 25px;
 	}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+	.cabecera h1{
+		font-size:9vmin;
+
+	}
+	
+	.cabecera h2{
+		font-size:3vmin;
+
+	} 
 }
