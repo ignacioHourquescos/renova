@@ -9,14 +9,10 @@ function obtenerListaEspecifica (id) {
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
 		for(i=0; i<data.resultado.length;i++){
 			let precioConIva=(data.resultado[i].p*1.21).toFixed(0);
-			data.resultado[i].pf=precioConIva;
-			data.resultado[i].p=data.resultado[i].p.toFixed(0);
+			data.resultado[i].pf="$"+precioConIva;
+			data.resultado[i].p="$"+data.resultado[i].p.toFixed(0);
 			//data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
-		}
-
-	
-
-		
+		}		
 		$('table').bootstrapTable({ 
 			data: data.resultado,
 		}); 

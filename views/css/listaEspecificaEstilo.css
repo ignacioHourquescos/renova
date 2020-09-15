@@ -66,5 +66,24 @@ td, th{
     .float-left.search.btn-group{
         width:100%;
     }
+    .cabecera{
+        padding-top:8em;
+        padding-bottom:10em;
+    }
+    #seccionLista{
+        padding-top:2Vmin;
+    }
+    td {
+        font-size:4vmin;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .card-view-title{
+        font-size:3.3vmin;
+        display:none;
+        width:10%;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    
   }
 
