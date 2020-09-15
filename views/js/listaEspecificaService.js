@@ -11,8 +11,10 @@ function obtenerListaEspecifica (id) {
 			let precioConIva=(data.resultado[i].p*1.21).toFixed(0);
 			data.resultado[i].pf=precioConIva;
 			data.resultado[i].p=data.resultado[i].p.toFixed(0);
+			data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
 		}
 
+	
 
 		
 		$('table').bootstrapTable({ 
@@ -26,3 +28,9 @@ function obtenerListaEspecifica (id) {
 
 obtenerListaEspecifica(id);
 
+function convertirStockNumericoEnEscala(elemento){
+	if (elemento<10) 	
+		return "CONSULTAR"
+	if (elemento>=10) 	
+		return "DISPONIBLE"
+}
