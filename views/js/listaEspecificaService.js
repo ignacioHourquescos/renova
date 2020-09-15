@@ -7,90 +7,30 @@ var id=getQueryParam("id");
 function obtenerListaEspecifica (id) {
 	
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
-		console.log("aca");
-		for(var i=0; i<data.resultado.recordsets[0].length;i++){
-			let precioConIva=data.resultado.recordsets[0][i].precio_vta*1.21;
-			data.resultado.recordsets[0][i].precio_vta_final=precioConIva.toFixed(0);
-			data.resultado.recordsets[0][i].precio_vta=data.resultado.recordsets[0][i].precio_vta.toFixed(0);
+		for(i=0; i<data.resultado.length;i++){
+			let precioConIva=(data.resultado[i].p*1.21).toFixed(0);
+			data.resultado[i].pf=precioConIva;
+			data.resultado[i].p=data.resultado[i].p.toFixed(0);
+			data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
 		}
-	$('table').bootstrapTable({ 
-		  data: data.resultado.recordsets[0],
-		}); 
+
 	
-	document.getElementById("nombreLista").innerHTML=data.agrupacion;
 
+		
+		$('table').bootstrapTable({ 
+			data: data.resultado,
+		}); 
+		document.getElementById("nombreLista").innerHTML=data.agrupacion;
 	}));
-
-
 }
-
-function myFunction() {
-	var input, filter, table, tr, td, i, txtValue;
-	input = document.getElementById("myInputCodigo");
-	filter = input.value.toUpperCase();
-	table = document.getElementById("myTable");
-	tr = table.getElementsByTagName("tr");
-	for (i = 0; i < tr.length; i++) {
-	  td = tr[i].getElementsByTagName("td")[0];
-	  if (tr[i].getElementsByTagName("td")[0]) {
-		txtValue = td.textContent || td.innerText;
-		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-		  tr[i].style.display = "";
-		} else {
-		  tr[i].style.display = "none";
-		}
-	  }       
-	}
-  }
-
-//   function myFunction2() {
-// 	var input, filter, table, tr, td, i, txtValue;
-// 	input2 = document.getElementById("myInputDescripcion");
-// 	filter = input2.value.toUpperCase();
-// 	table = document.getElementById("myTable");
-// 	tr = table.getElementsByTagName("tr");
-// 	for (i = 0; i < tr.length; i++) {
-// 	  td = tr[i].getElementsByTagName("td")[1];
-// 	  if (td) {
-// 		txtValue = td.textContent || td.innerText;
-// 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-// 		  tr[i].style.display = "";
-// 		} else {
-// 		  tr[i].style.display = "none";
-// 		}
-// 	  }       
-// 	}
-//   }
-
 
 
 
 obtenerListaEspecifica(id);
 
-
-// var $table = $('#myTable')
-
-//   $(function() {
-//       $table.bootstrapTable('destroy').bootstrapTable({
-//         exportDataType: $(this).val(),
-//         exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-//         columns: [
-//           {
-//             field: 'state',
-//             checkbox: true,
-//             visible: $(this).val() === 'selected'
-//           },
-//           {
-//             field: 'id',
-//             title: 'ID'
-//           }, {
-//             field: 'name',
-//             title: 'Item Name'
-//           }, {
-//             field: 'price',
-//             title: 'Item Price'
-//           }
-//         ]
-//       })
-//     }).trigger('change')
-
+function convertirStockNumericoEnEscala(elemento){
+	if (elemento<10) 	
+		return "CONSULTAR"
+	if (elemento>=10) 	
+		return "DISPONIBLE"
+}
