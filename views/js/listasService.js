@@ -1,7 +1,7 @@
 // Al finalizarse de cargar el DOM:
 
-//var server ="http://localhost:5000";
-var server ="https://renovaapi.herokuapp.com";
+var server ="http://localhost:5000";
+//var server ="https://renovaapi.herokuapp.com";
 
 function cargarListas () {
 	//Carga las cards de las listas de precios
