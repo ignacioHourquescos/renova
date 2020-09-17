@@ -12,6 +12,7 @@
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet">
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
   <!-- jquery                 --><script src="../js/src/jquery.js"></script>
   <!-- helpers                --><script src="../js/src/helpers.js"></script>
   <!-- sticky header          --><script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
@@ -27,9 +28,19 @@
   <!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
   <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
   <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+
+
 </head> 
 
-
+<style>
+	.ph-item,
+	.ph-picture {
+	  width: 100%;
+	  height: 100%;
+	  padding: 0;
+	  margin: 0;
+	}
+  </style>
 
 
 <!-- TABLA DE LISTA DE PRECIOS
@@ -39,8 +50,7 @@
 	<div class="container-fluid cabecera"> 
 		<h1 id="nombreLista"></h1>
 		<h2 id="ultimaActualizacion">Ultima actulizacion: Sep 2020</h2>
-	</div>
-	
+
 <section id="seccionLista">
 	<div class="intro-wrap col-sm-12" style="height:80%;">
       		<div class="col-sm-12"></div>			 
@@ -59,7 +69,8 @@
 							data-key-events="true"
 							data-fixed-columns="true"
 							data-show-print="true"					 
-							data-toolbar-align="left">
+							data-toolbar-align="left"
+							data-loading-template="loadingTemplate">
 						<thead class="thead-dark"> 
 							  <tr> 
 								  <th data-field="id">  						Articulo		</span style="text-align: center;"></th> 
@@ -68,11 +79,11 @@
 								  <th data-field="pf" data-width="90"class="text-right">  	Precio con IVA 	</span> </th>  
 							  </tr> 
 						</thead> 
-					</table> 
+					</table> 		  
 				</div> 
 			</div>   		
 </section>
-
+</div>
 
 
 

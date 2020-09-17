@@ -2,10 +2,14 @@
 var server ="https://renovaapi.herokuapp.com";
 //var server ="http://localhost:5000";
 
+
+
+
+
+
 var id=getQueryParam("id");
 
 function obtenerListaEspecifica (id) {
-	
 	$(document).ready($.getJSON(server+"/listas/"+id, function (data) { 
 		for(i=0; i<data.resultado.length;i++){
 			let precioConIva=(data.resultado[i].p*1.21).toFixed(0);
@@ -31,3 +35,6 @@ function convertirStockNumericoEnEscala(elemento){
 	if (elemento>=10) 	
 		return "DISPONIBLE"
 }
+
+
+
