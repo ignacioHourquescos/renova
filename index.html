@@ -10,10 +10,16 @@
 <link rel="stylesheet" 		href="./views/css/vendor.css">
 <link rel="stylesheet" 		href="./views/css/main.css">
 <link rel="stylesheet" 		href="./views/css/personal.css">
+
+<link rel="stylesheet" 		href="./views/css/index.css">
+<link rel="stylesheet" 		href="./views/css/carrousel.css">
+<link rel="stylesheet" 		href="./views/css/galeria.css">
+
 <link rel="stylesheet" 		href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="./views/js/src/modernizr.js"></script>
 <script src="./views/js/src/pace.min.js"></script>
+<script src="./views/js/carusel.js"></script>
 <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 
 
@@ -22,7 +28,7 @@
 
 
 <!--salto de linea en negro al ppio de la hoja-->
-<div style="color:black; display:inline-block"></div>
+
 <body id="top">
 	
 
@@ -75,7 +81,7 @@
 			   	<div class="home-content-tablecell">
 					<div class="row">
 			   			<div class="col-twelve">		   			
-							<img src="./views/images/portfolio/logoRenova.png" style="width:50%" alt="">
+							<img src="./views/images/logoRenova.png" style="width:50%" alt="">
 						  	<h2 class="animate-intro">distribucion filtros & lubricantes<br></h2>
 						  	<div class="more animate-intro">
 								<a class="button stroke col-four columna" href="./views/html/listas.html">Lista de Precios</a>
@@ -97,24 +103,17 @@
 
 
 <!-- LOGOS CARROUSEL
-================================================== 
-<section id="clients">
-	<div class="row animate-this">
-		<div class="col-twelve">
-			<div class="client-lists owl-carousel">
-				<div><img src="../images/clients/pyroil2.png" alt=""></div>
-				<div><img src="../images/clients/Presentación1.png" alt=""></div>
-				  <div><img src="../images/clients/motul.png" alt=""></div>
-				  <div><img src="../images/clients/valvoline.png" alt=""></div>
-				  <div><img src="../images/clients/total.png" alt=""></div>
-				  <div><img src="../images/clients/wagner.png" alt=""></div>
-				  <div><img src="../images/clients/pyroil.png" alt=""></div>
-			</div>
-		</div>  end col-twelve 
-	</div>  end row 
-
-</section> -->
-
+================================================== -->
+<div class="container-fluid carusel">
+	<img class="logo" src="views/images/logos/fram.png">
+	<img class="logo" src="views/images/logos/valvoline.png">
+	<img class="logo" src="views/images/logos/motul.png">
+	<img class="logo" src="views/images/logos/total.png">
+	<img class="logo" src="views/images/logos/elf.png">
+	<img class="logo" src="views/images/logos/petronas.png">
+	<img class="logo" src="views/images/logos/locx.png">
+	<img class="logo" src="views/images/logos/wl.png">
+</div>
 
 <!-- SEVICIOS
 ================================================== -->
@@ -167,111 +166,25 @@
 <!-- IMAGENES
 ================================================== -->
 <section id="portfolio">
-   	
-   	<div class="intro-wrap">
 
-   		<div class="row narrow section-intro with-bottom-sep animate-this">
-	   		<div class="col-twelve">
-		   		<h1>Nuestros Productos</h1>  			
-		   		<p class="lead">Somos distribuidores oficiales de marcas de primera calidad en el mercado</p>	   			
-	   		</div>   		
-	   	</div> <!-- end row section-intro -->   		
-
-   	</div> <!-- end intro-wrap -->   	
-
-   	<div class="row portfolio-content">
-   		<div class="col-twelve">
-   			<div id="folio-wrap" class="bricks-wrapper">					
-				<a href="https://www.valvoline.com.ar/home/">
-   				<div class="brick folio-item">
-					<a href="https://www.valvoline.com.ar/home/" class='details-link' title="details">
-				   	<div class="item-wrap animate-this" data-src="../images/portfolio/gallery/g-valvoline.jpg" data-sub-html="#01" > 	
-						<a href="#">
-					  		<img src="../images/portfolio/valvoline.jpg" alt="Skaterboy">	                     
-							<div class="item-text">
-							 	<span class="folio-types">Lubricantes</span>
-			 					<h3 class="folio-title">Valvoline</h3>	     					   
-			 				</div>                                        
-					  <a href="https://www.valvoline.com.ar/" class='details-link' title="details">
-					  	<i class="icon-link"></i>
-					  </a>
-					  
-				   </div>					
-				</div>
-			</a>
-
-					<div class="brick folio-item">
-				   <div class="item-wrap animate-this" data-src="../images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02"> 	
-					  <a href="#" class="overlay">
-					  	<img src="../images/portfolio/fram2.png" alt="Shutterbug">	                     
-						 <div class="item-text">
-						 	<span class="folio-types">
-			 						  Marketing
-			 					   </span>
-			 					   <h3 class="folio-title">Yellow Wall</h3>  	     					   
-			 					</div>                                        
-					  </a>
-					  <a href="https://www.behance.net/" class='details-link' title="details">
-					  	<i class="icon-link"></i>
-					  </a>
-				   </div> <!-- end item-wrap -->
-
-				   <div id="02" class='hide'>
-							<h4>Yellow Wall</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.valvoline.com.ar/">Details</a></p>
-						</div>	               
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-				   <div class="item-wrap animate-this" data-src="../images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >   	
-					  <a href="#" class="overlay">
-					  	<img src="../images/portfolio/motul.jpg" alt="Explore">	                     
-						 <div class="item-text">	                     		     					    
-			 					   <span class="folio-types">
-			 						  Web Design
-			 					   </span>
-			 					   <h3 class="folio-title">Architecture</h3>
-			 					</div>                                        
-					  </a>
-					  <a href="https://www.behance.net/" class='details-link' title="details">
-					  	<i class="icon-link"></i>
-					  </a>
-				   </div> <!-- end item-wrap -->	
-
-				   <div id="03" class='hide'>
-							<h4>Architecture</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>               
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-				   <div class="item-wrap animate-this"  data-src="../images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >
-					  <a href="#" class="overlay">
-					  	<img src="../images/portfolio/petronas.jpg" alt="Minimalismo">	                     
-						 <div class="item-text">	     					    
-			 					   <span class="folio-types">
-			 						  Web Design
-			 					   </span>
-			 					   <h3 class="folio-title">Minimalismo</h3>
-			 					</div>                                        
-					  </a>
-					  <a href="https://www.behance.net/" class='details-link' title="details">
-					  	<i class="icon-link"></i>
-					  </a>
-				   </div> <!-- end item-wrap -->
-
-				   <div id="04" class='hide'>
-							<h4>Minimalismo</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
-						</div>  	               
-					</div> <!-- end folio-item --> 
+	  
+	  <div id="divGaleria">
+		  <div class="gallery" id="gallery">
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/fram2.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/valvoline.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/moutl2.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/motul.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/petronas.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/locx.jpg" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/total.png" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/fram.png" alt="Card image cap"></div>
+			<div class="mb-3 pics animation all 1"><img class="img-fluid" src="./views/images/portfolio/valvoline2.png" alt="Card image cap"></div>
 			
+		  </div>
+		</div>
 
-   			</div> <!-- end folio-wrap -->
-   		</div> <!-- end twelve -->
-   	</div> <!-- end portfolio-content -->   	
 
-</section>  <!-- end portfolio -->
+</section> <!-- end portfolio -->
 
 
 <!-- TESTIMONIALES
@@ -280,7 +193,7 @@
 
    	<div class="row">
    		<div class="col-twelve">
-   			<h2 class="animate-this">What They Say About Us.</h2>
+   			<h2 class="animate-this">Que dicen de nosotros</h2>
    		</div>   		
    	</div>   	
 
@@ -292,36 +205,39 @@
 
 			   <li>
 				  <p>
-				  Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-				  to do what you believe is great work. And the only way to do great work is to love what you do.
-				  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+					Muy buenos precios , amplio surtido , de todo en filtros y aceites y excelente atención! 
 				  </p> 
-
-				  <div class="testimonial-author">
-						<img src="../images/avatars/user-02.jpg" alt="Author image">
-						<div class="author-info">
-							Steve Jobs
-							<span class="position">CEO, Apple.</span>
-						</div>
-				  </div>                 
+              
 			 	</li> <!-- end slide -->
-
+				 <li>
+					<p>
+					 Me asesoraron desde el inicio de la apertura del lubricentro acompañandome en todo el proceso. Escelente asesoría. Gracias!! 
+					</p>                                       
+				 </li> <!-- end slide -->
+	
+	
 			   <li>
 				  <p>
-				  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-				  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-				  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.    
-				  </p>
-
-			   	<div class="testimonial-author">
-						<img src="../images/avatars/user-03.jpg" alt="Author image">
-						<div class="author-info">
-							John Doe
-							<span>CEO, ABC Corp.</span>
-						</div>
-				  </div>                                         
+					Muy buena atencion y tienen de todo!!
+				  </p>                                       
 			   </li> <!-- end slide -->
 
+			   <li>
+				<p>
+					Atención impecable, mejores precios y muy buena calidad en los productos
+				</p>                                       
+			 </li> <!-- end slide -->
+			 <li>
+				<p>
+					De lo mejor en distribuidoras de aceites y filtros!
+				</p>                                       
+			 </li> <!-- end slide -->
+			 <li>
+				<p>
+				  Buscaba un filtro especifico para industria que solo consegia importado. Me asesoraron para reemplazarlo por uno nacional, que anda perfecto. De 10!
+				</p>                                       
+			 </li> <!-- end slide -->
+			 
 			</ul> <!-- end slides -->
 
 		 </div> <!-- end testimonial-slider -->         
@@ -403,11 +319,11 @@
 		 	<div class="cinfo"><p>Dr. Adolfo Dickman 984<br>La Paternal, Ciudad Autonoma Buenos Aires<br></p></div> 
 	   		<div class="cinfo">
 	   			<h6>Nuestro mail</h6>
-	   			<p>info@sitribuidorarenova.com<br></p>
+	   			<p>info@distribuidorarenova.com<br></p>
 	   		</div> 
 	   		<div class="cinfo">
-	   			<h6>Call Us At</h6>
-	   			<p>11 4582-2887<br>11 47449891<br></p>
+	   			<h6>Llamanos</h6>
+	   			<p>11 4582-2887</p>
 	   		</div>
 		</div>
    	</div>
@@ -493,6 +409,7 @@
 
 
 </body>
+<script src="./views/js/react.js"></script>
 <script src="./views/js/src/plugins.js"></script>
 <script src="./views/js/src/main.js"></script>
 <script   type="module"  src="./views/js/indexService.js"></script>

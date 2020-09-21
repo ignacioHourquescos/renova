@@ -40,7 +40,7 @@ const constantes ={
           position: "right" //Position: left | right
    
         });
-      })()
+      })
 
 // FUNCTION
 
