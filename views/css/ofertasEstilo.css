@@ -55,7 +55,7 @@ body {
    
 }
 .container-fluid #subtitulo{
-    color:rgb(128, 121, 121);
+    color:rgb(251, 88, 13);
     font-size:4vmin;
     padding-bottom: 2vmin;
     text-align:center;
@@ -94,11 +94,11 @@ body {
 }
 
 .imagenKit{
-    height:30vmin;
+    height:25vmin;
   }
 
 .imagenOferta{
-    height:25vmin;
+    height:35vmin;
 }
 
 .rectanguloOfertas{
@@ -148,7 +148,7 @@ body {
         padding-bottom:10em;
     }
     .cabecera h1{
-        font-size:3rem;
+        font-size:2.2rem;
     }
 
     .imagenKit{
@@ -161,3 +161,9 @@ body {
     
   }
 
+
+  img:hover{
+    transition: .5s;
+  transform: scale(1.1);
+  z-index:10;
+}
