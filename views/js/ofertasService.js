@@ -14,7 +14,7 @@ function cargarOfertasMensuales () {
 			var divCompetencia = $(".oferta").clone().removeClass("oferta");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.toFixed(0));
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0).toFixed(0));
 			$(divCompetencia).find('.imagenOferta').attr("src",data[i].img);
     	  	$(".ofertas").append(divCompetencia);
 		};
