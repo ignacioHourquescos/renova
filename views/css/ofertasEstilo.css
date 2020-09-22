@@ -5,43 +5,51 @@
     font-weight: normal;
   }
 
-body{
-    background-color: #efefef;
-}
 
 /*////////////////////////////////////////////FONDO*/
+/*--------- CUSTOM LAYOUT ---------*/
+
+
+body {
+	width:100%;
+	text-align: center;
+	margin:0px;
+	padding:0px;
+}
+  
 .cabecera{
-    background-image: url(../images/fondoNaranja.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height:15em;
-    padding-top:5em; 
-    padding-bottom:20em;
+	background-color: #000000;
+	background-size: 100%;
+	height:15rem;
+	margin:0px;
+	padding:5rem;
+	padding-bottom:10rem;
 }
-
+  
+  
 .cabecera h1{
-    font-size:13vmin;
-    color:white;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: "montserrat-bold", sans-serif;
-    font-style: normal;
-    text-rendering: optimizeLegibility;
+	font-family: "librebaskerville-bold", serif;
+	font-size: 4.8rem;
+	color:white;
+	text-shadow: 2px 2px 4px #000000;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
 }
-
+  
 .cabecera h2{
-    font-size:4vmin;
-    text-align:center;
-    color:white;
-    text-shadow: 1px 1px 2px #000000;
+	font-size:4vmin;
+	text-align:center;
+	color:white;
+	text-shadow: 1px 1px 2px #000000;
 } 
-
 
 /*///////////////////////////////TITULO Y SIBTITULO*/
 .container-fluid #titulo{
     color:black;
     text-decoration:underline;
+    font-family: "librebaskerville-bold", serif;
     margin-top:3vmin;
-    font-size:10vmin;
+    font-size:8vmin;
     padding-top:10vmin;
     text-shadow: 2px 2px 4px rgb(83, 83, 83);
    
@@ -139,6 +147,17 @@ body{
         padding-top:8em;
         padding-bottom:10em;
     }
+    .cabecera h1{
+        font-size:3rem;
+    }
 
+    .imagenKit{
+        height:25vmin;
+      }
+    
+    .imagenOferta{
+        height:20vmin;
+    }
+    
   }
 

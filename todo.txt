@@ -1,5 +1,11 @@
 TODO.
 
 LISTAS.HTML
-- poner logo
 - detallar aumentos con google sheets
+
+- terminar lubri
+- menu 
+- listas header
+- agrupar por agrpuacion
+- detalle descuentos
+- fomtao ofertas
