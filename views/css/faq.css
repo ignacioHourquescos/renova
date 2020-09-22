@@ -1,0 +1,31 @@
+.seccionfull{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    justify-items:space-between;
+    align-content:center;
+    padding:0rem;
+}
+
+iframe{
+    width:50rem;
+    padding:3rem;
+    border:none;
+}
+
+
+@media only screen and (max-width: 770px) {
+    .seccionfull{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        justify-items:space-between;
+        align-content:center;
+        padding:0rem;
+    }
+    iframe{
+        width:100%;
+        padding:1rem;
+        border:none;
+    }
+}

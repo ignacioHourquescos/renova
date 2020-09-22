@@ -28,7 +28,7 @@
   <!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
   <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
   <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
-
+  <!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
 		<link rel="stylesheet" href="../css/micons/micons.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
     	<link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -88,14 +88,15 @@
 							data-fixed-columns="true" 
 							data-show-print="true"					 
 							data-toolbar-align="left"
-							data-show-header="false">
+							data-show-header="true"
+							data-group-by-field="r">
 							<thead class="thead-dark" > 
 							  <tr> 
-								  	<th data-field="id">  						Articulo		</span style="text-align: center;"></th> 
-								  	<th data-field="d" >  						Descripcion		</span style="text-align: left;"> </th> 
-								  	<th data-field="r" class="text-wrap" data-card-visible="false">  						Rubro	</span style="text-align: left;"> </th> 
-								  	<th data-field="p" data-width="90" class="text-right" data-card-visible="false" >    		Precio sin IVA 	</span> </th>
-									<th data-field="pf" data-width="90"class="text-right">  	Precio con IVA 	</span> </th>  
+<th data-field="id"data-width="10" data-width-unit="%">  								Articulo		</span style="text-align: center;"></th> 
+<th data-field="d" class="text-wrap">  													Descripcion		</span style="text-align: left;"> </th> 
+<th data-field="r" data-width="20" data-width-unit="%"data-card-visible="false">  		Rubro			</span> </th> 
+<!-- <th data-field="p" data-width="90" class="text-right" data-card-visible="false" >  Precio sin IVA 	</span> </th> -->
+<th data-field="pf" data-width="90" data-align="center">  								Precio con IVA 	 </th>  
 							  </tr> 
 						</thead> 
 					</table> 		  
