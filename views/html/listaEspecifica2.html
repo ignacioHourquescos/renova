@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+		
+		<title>Lista Especifica</title>
+		<script src="../js/src/jquery.js"></script>
+		<script src="../js/src/helpers.js"></script>
+		  <!-- sticky header          --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+  <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
+  <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet">
+  <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+  <!-- jquery                 --><script src="../js/src/jquery.js"></script>
+  <!-- helpers                --><script src="../js/src/helpers.js"></script>
+  <!-- sticky header          --><script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
+  <!-- sticky header          --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script> 
+  <!-- sticky header          --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script> 
+  <!-- sticky header          --><script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"> </script> 
+  <!-- sticky header          --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js"></script>
+  <!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+  <!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+  <!-- exportacion            --><script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+  <!-- exportacion            --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/export/bootstrap-table-export.min.js"></script>
+  <!-- fija columna 1         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js"></script>
+  <!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+  <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
+  <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../css/micons/micons.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+    	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../css/personal.css">
+		<link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+		<link rel="stylesheet" href="../css/listaEspecifica2.css">
+		</head>
+
+
+
+<!-- SIDE MENU
+================================================== -->
+<header>
+	<a id="header-menu-trigger" href="#0">
+		<span class="header-menu-text">Menu</span>
+		<span class="header-menu-icon"></span>
+	</a>
+	<nav id="menu-nav-wrap">
+		<a href="#0" class="close-button" title="close"><span>Close</span></a>
+		<h3>Libreria770</h3>
+		<ul class="nav-list">
+			<li><a class="" href="../index.html" title="">				Home</a></li>
+			<li><a class="" href="listas.html" title="">							Listas</a></li>
+			<li><a class="current" href="ofertas.html" title="">					Ofertas</a></li>
+			<li><a class="" href="login.html" style="color:yellow">			  Mi cuenta</a></li>				
+		</ul>
+	</nav> <!-- end #menu-nav-wrap -->
+
+</header> <!-- end header -->  
+
+
+<!-- SECCION DE OFERTAS
+================================================== -->
+
+
+<body id="body">
+<div class="container-fluid cabecera"> 
+	<h1 id="nombreLista"></h1>
+
+	<h2>Disponibles en breve</h2>
+</div>
+
+
+<section id="seccionLista">
+	<div class="intro-wrap col-sm-12" style="height:80%;">
+      		<div class="col-sm-12"></div>			 
+				<div class="container-fluid tabla">  
+					<table	class="border-success" 
+							style="background-color:rgb(255, 255, 255)" 
+							width=100%
+							id="myTable"
+							data-buttons-class="danger"
+							data-mobile-responsive="true"
+							data-mobile-responsive="true"
+							data-search-align="left"
+							data-search="true"
+							data-show-export="true"
+							data-show-columns="true"
+							data-key-events="true"
+							data-fixed-columns="true"
+							data-show-print="true"					 
+							data-toolbar-align="left"
+							data-loading-template="loadingTemplate">
+						<thead class="thead-dark"> 
+							  <tr> 
+								  	<th data-field="id">  						Articulo		</span style="text-align: center;"></th> 
+								  	<th data-field="d" class="text-wrap">  						Descripcion		</span style="text-align: left;"> </th> 
+								  	<th data-field="r">  						Rubro	</span style="text-align: left;"> </th> 
+								  	<th data-field="p" data-width="90" class="text-right">    		Precio sin IVA 	</span> </th>
+									<th data-field="pf" data-width="90"class="text-right">  	Precio con IVA 	</span> </th>  
+							  </tr> 
+						</thead> 
+					</table> 		  
+				</div> 
+			</div>   		
+</section>
+
+
+	</body>
+
+<!-- footer
+================================================== -->
+
+
+
+
+
+<script src="../js/src/plugins.js"></script>
+<script src="../js/src/main.js"></script>
+
+<script src="../js/listaEspecificaService.js"></script>
+</html>
