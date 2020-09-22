@@ -14,7 +14,7 @@ function cargarOfertasMensuales () {
 			var divCompetencia = $(".oferta").clone().removeClass("oferta");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.toFixed(0));
 			$(divCompetencia).find('.imagenOferta').attr("src",data[i].img);
     	  	$(".ofertas").append(divCompetencia);
 		};
@@ -30,7 +30,7 @@ function cargarKits () {
 			var divCompetencia = $(".kit").clone().removeClass("kit");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".kits").append(divCompetencia);
 		};
@@ -45,7 +45,7 @@ function cargarValvoline () {
 			var divCompetencia = $(".valvoline").clone().removeClass("valvoline");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9*0).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".valvolineOfertas").append(divCompetencia);
 		};
@@ -61,7 +61,7 @@ function cargarMotul() {
 			var divCompetencia = $(".motul").clone().removeClass("motul");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9*0).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".motulOfertas").append(divCompetencia);
 		};
