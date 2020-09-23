@@ -1,77 +1,5 @@
-let faqs =[
-  "Margenes del negocio",
-  "La prinicpal difernecia entre un aceite sintetico y seasdsadsadmisintetico radica en los copenente sde fabricacion", 
-  
-  "Stock inicial",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-  
-  "Ubicacion del negocio",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-
-  "Equipamiento para la abertura",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-
-  "Todos los aceites son iguales?",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-  
-  "Primeras y segundas marcas",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-
-  "Bidon vs tambor",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-
-  
-  "Productos compelementarios",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu",
-
-  "Diseño de un lubricentro",
-  "Oil control",
-
-  "Que tipo de vehiculos ?",
-  "Oil control",
-
-  "Que dimnesiones necesito?",
-  "Oil control",
-
-  "Comunicacion y marketing",
-  "Oil control",
-
-  "Versatilidad y adaptabilidad?",
-  "",
-  
-  "Marca que se trabajan",
-  "2 o3 empresas de lubricnates",
-
-  "Marca que se trabajan",
-  "2 o3 empresas de lubricnates",
 
 
-  "Tratamiento de desechos",
-  "manejar d emanera eficiente los desehco segun normativas vigentes y tambien mantener una imagen limpia",
-
-
-  "maquinas y herraminetas a reutulizar",
-  "Fidelizacion de erraminetas. ",
-
-
-
-];
-
-//INSERTAR PREGUNTAS EN DIV "campoPreguntas"
-function insertarpreguntas(constantes){
-	var node = document.getElementById("campoPreguntas")
-	for (var i = 0; i<faqs.length; i=i+2){
-		let newButton = document.createElement("button");
-		newButton.className="accordion";
-		newButton.innerHTML=faqs[i];
-		node.appendChild(newButton);
-		let newPanel= document.createElement("div");
-		newPanel.className="panelfaq";
-		newPanel.innerHTML=faqs[i+1];
-		newPanel.style.color="#0f0f0f";
-		node.appendChild(newPanel);
-	}
-}
 
 //ACCORDION MENU
 function accordionMenu(){
@@ -89,24 +17,64 @@ let acc = document.getElementsByClassName("accordion");
 	}
 }
 
-insertarpreguntas(faqs);
-accordionMenu();
 
 
 
-//WHATSAPP FUNCTION
-$(function () {
-        $('#WAButton').floatingWhatsApp({
-          phone: '5491165106333', //WhatsApp Business phone number
-           //headerTitle: 'Escribinos!', //Popup Title
-          popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
-          showPopup: true, //Enables popup display
-          buttonImage: '<img src="images/whatsappModern.png" />', //Button Image
-          //headerColor: 'crimson', //Custom header color
-          backgroundColor: 'crimson', //Custom background button color
-          position: "right" //Position: left | right
+
+
+// //WHATSAPP FUNCTION
+// $(function () {
+//         $('#WAButton').floatingWhatsApp({
+//           phone: '5491165106333', //WhatsApp Business phone number
+//            //headerTitle: 'Escribinos!', //Popup Title
+//           popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
+//           showPopup: true, //Enables popup display
+//           buttonImage: '<img src="images/whatsappModern.png" />', //Button Image
+//           //headerColor: 'crimson', //Custom header color
+//           backgroundColor: 'crimson', //Custom background button color
+//           position: "right" //Position: left | right
    
-        });
-})()
+//         });
+// })()
 
 
+
+// Al finalizarse de cargar el DOM:
+
+function cargarOfertas () {
+  //busca en el backend todas las ofertas
+  $.getJSON(('https://spreadsheets.google.com/feeds/cells/1HcLINUnm07IbDFz4Fn7R_B-XWsmscfiBn6Yo79Op4H8/1/public/full?alt=json'), function (data) {
+  var faqs=[]
+  var numeroDePreguntas = data.feed.entry.length;
+  for (var i = 2; i < numeroDePreguntas; i++) {
+    faqs.push(data.feed.entry[i].gs$cell.$t);
+  }
+  console.log(faqs);
+  console.log(faqs.length);
+  insertarpreguntas(faqs);
+});
+}
+
+
+
+//INSERTAR PREGUNTAS EN DIV "campoPreguntas"
+function insertarpreguntas(faqs){
+  var node = document.getElementById("campoPreguntas")
+  console.log(faqs);
+	for (var i = 0; i<faqs.length; i=i+2){
+		let newButton = document.createElement("button");
+		newButton.className="accordion";
+		newButton.innerHTML=faqs[i];
+		node.appendChild(newButton);
+		let newPanel= document.createElement("div");
+		newPanel.className="panelfaq";
+		newPanel.innerHTML=faqs[i+1];
+		newPanel.style.color="#0f0f0f";
+		node.appendChild(newPanel);
+  }
+  accordionMenu();
+}
+
+
+
+cargarOfertas();
