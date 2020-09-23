@@ -1,6 +1,4 @@
 
-
-
 //ACCORDION MENU
 function accordionMenu(){
 let acc = document.getElementsByClassName("accordion");
@@ -18,30 +16,22 @@ let acc = document.getElementsByClassName("accordion");
 }
 
 
+//DATA PARA PARRAFO DE INTRODUCION
+function cargarIntro () {
+  //busca en el backend todas las ofertas
+  $.getJSON(('https://spreadsheets.google.com/feeds/cells/1HcLINUnm07IbDFz4Fn7R_B-XWsmscfiBn6Yo79Op4H8/2/public/full?alt=json'), function (data) {
+  var parrafos=[]
+  var numeroDeParrafos = data.feed.entry.length;
+  for (var i = 0; i < numeroDeParrafos; i++) {
+    parrafos.push(data.feed.entry[i].gs$cell.$t);
+  }
+  insertarParrafos(parrafos);
+});
+}
 
 
-
-
-// //WHATSAPP FUNCTION
-// $(function () {
-//         $('#WAButton').floatingWhatsApp({
-//           phone: '5491165106333', //WhatsApp Business phone number
-//            //headerTitle: 'Escribinos!', //Popup Title
-//           popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
-//           showPopup: true, //Enables popup display
-//           buttonImage: '<img src="images/whatsappModern.png" />', //Button Image
-//           //headerColor: 'crimson', //Custom header color
-//           backgroundColor: 'crimson', //Custom background button color
-//           position: "right" //Position: left | right
-   
-//         });
-// })()
-
-
-
-// Al finalizarse de cargar el DOM:
-
-function cargarOfertas () {
+//AL FINALIZAR DE CARGAR DOM BUSCA DATA EN GOOGLE
+function cargarPreguntas () {
   //busca en el backend todas las ofertas
   $.getJSON(('https://spreadsheets.google.com/feeds/cells/1HcLINUnm07IbDFz4Fn7R_B-XWsmscfiBn6Yo79Op4H8/1/public/full?alt=json'), function (data) {
   var faqs=[]
@@ -49,18 +39,26 @@ function cargarOfertas () {
   for (var i = 2; i < numeroDePreguntas; i++) {
     faqs.push(data.feed.entry[i].gs$cell.$t);
   }
-  console.log(faqs);
-  console.log(faqs.length);
   insertarpreguntas(faqs);
 });
 }
 
+//INSERTAR PARRAFOS EN INTRO
+function insertarParrafos(elemento){
+  var node = document.getElementById("campoParrafo");
+  for (var i=0; i<elemento.length;i++){
+    let parrafo=document.createElement("h2");
+    parrafo.style.color="#ffffff";
+    parrafo.innerHTML=elemento[i];
+    node.appendChild(parrafo);
+  } 
+}
 
 
 //INSERTAR PREGUNTAS EN DIV "campoPreguntas"
 function insertarpreguntas(faqs){
   var node = document.getElementById("campoPreguntas")
-  console.log(faqs);
+
 	for (var i = 0; i<faqs.length; i=i+2){
 		let newButton = document.createElement("button");
 		newButton.className="accordion";
@@ -76,5 +74,5 @@ function insertarpreguntas(faqs){
 }
 
 
-
-cargarOfertas();
+cargarIntro();
+cargarPreguntas();

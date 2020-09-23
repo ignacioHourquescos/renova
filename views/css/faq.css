@@ -6,7 +6,7 @@
     animation-iteration-count: 0;
   }
   
-  //*#WAButton:hover {
+  /*#WAButton:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0s;
   
@@ -20,9 +20,6 @@
   }
   
 
-
-
-
 .seccionfull{
     display:flex;
     flex-direction:row;
@@ -30,6 +27,16 @@
     justify-items:space-between;
     align-content:center;
     padding:0rem;
+    padding-top:4rem;
+    overflow-x: scroll;
+
+}
+
+
+ /*Hide scrollbar for Chrome, Safari and Opera*/
+.seccionfull::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: black;  /* Optional: just make scrollbar invisible */
 }
 
 iframe{
@@ -57,7 +64,8 @@ iframe{
 
 
 
-/* FAQ*/
+/*///////////FAQ/////////////////////////////////////////////*/
+
 #myInputCodigo {
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
