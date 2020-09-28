@@ -5,8 +5,9 @@ var server ="https://renovaapi.herokuapp.com";
 
 function obtenerListaArticulosBajoStock () {
 	$(document).ready($.getJSON(server+"/stock", function (data) { 
+	
 	 $('table').bootstrapTable({ 
-		data: data
+		data:data
 		}); 
 	}));
 }

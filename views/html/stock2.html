@@ -26,6 +26,8 @@
   <!-- table para mobile      --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
   <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
   <!-- loading template       <link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="../css/listaEspecifica2.css">
+
 </head> 
 
 
@@ -35,47 +37,54 @@
 ================================================== -->
 
 
-<section class="container-fluid" id="portfolio" style="height:10%" style="margin:0%;padding:0%">
+<body id="body">
+	<div class="container-fluid cabecera"> 
+		<h1 id="nombreLista"></h1>
+	
+		<h2>Disponibles en breve</h2>
+	</div>
+	
+
+<section id="seccionLista">
 	<div class="intro-wrap col-sm-12" style="height:80%;">
-    	<div class="row  section-intro  animate-this" style="justify-content: center;">
-			  <div class="col-sm-12"></div>		
-			  <h1>Stock a Controlar</h1>  		
-       	 	<p class="lead">Ultima actulizacion: Sep 2020</p>	 
-				<div class="container-fluid" style="padding:5%">  
-					<table
-					 class="table-striped border-success table-sm" 
-					 style="background-color:rgb(255, 255, 255)" 
-					 width=100%
-					 id="myTable"
-					 data-sticky-header="true"
-					 data-sticky-header-offset-right="5%"
-					 data-sticky-header-offset-left="5%"
-					 data-buttons-class="danger"
-					 data-mobile-responsive="true"
-					 data-mobile-responsive="true"
-					 data-search-align="left"
-					 data-search="true"
-					 data-show-export="true"
-					 data-show-columns="true"
-					 data-key-events="true"
-					 data-fixed-columns="true"
-					 data-show-print="true"
-					 data-toolbar-align="left"
-					 data-loading-template="loadingTemplate">
-					 <thead class="thead-dark" style="table-layout: fixed;"> 
-						<tr> 
-						  <th data-field="articulo">  Articulo</span style="text-align: center;"></th> 
-						  <th data-field="descrip_arti">  Descripcion</span> </th> 
-						  <th data-field="UM" class="precio">   UM </span> </th>
-						  <th data-field="unidades"class="precio" data-width="500" data-align="center">   unidades x mes </span> </th>  
-						  <th style="width:500px;" data-field="cant_stock"class="precio">  Stock </span> </th>  
-						</tr> 
-					  </thead> 
-					</table> 
-				</div>
-		</div>  			
-	</div>   		
+      		<div class="col-sm-12"></div>			 
+				<div class="container-fluid tabla" >  
+					<table	class="border-success"  style="background-color:rgb(255, 255, 255)" width=100%  id="myTable"
+							data-buttons-class="danger"
+							data-mobile-responsive="true"
+							data-search-align="left"
+							data-search="true"
+							data-show-export="true"
+							data-show-columns="true"
+							data-key-events="true"
+							data-fixed-columns="true" 
+							data-show-print="true"					 
+							data-toolbar-align="left"
+							data-show-header="true"
+							data-group-by-field="r">
+							<thead class="thead-dark" > 
+							  <tr> 
+								<th data-field="articulo" data-width="10" data-width-unit="%">  Articulo</span style="text-align: center;"></th> 
+								<th data-field="descrip_arti" class="text-wrap">  Descripcion</span> </th> 
+								<th data-field="UM" 	class="precio"	data-width="2" data-width-unit="%" data-align="center"> UM </span> </th>
+								<th data-field="unidades"class="precio" data-width="5" data-width-unit="%" data-align="center"> Stock minimo</span> </th>  
+								<th data-field="cant_stock" 			data-width="5" data-width-unit="%" data-align="center"> Stock en RP</span> </th>  
+								<th data-field="stockCritico" 			data-width="5" data-width-unit="%" data-align="center"> actulziacion</th>
+							  </tr> 
+						</thead> 
+					</table> 		  
+				</div> 
+			</div>   		
 </section>
+
+
+
+
+
+
+
+
+
 
 
 
