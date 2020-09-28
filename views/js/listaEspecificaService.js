@@ -24,18 +24,8 @@ function obtenerListaEspecifica (id) {
 	}));
 }
 
-// function myFunction(x) {
-// 	if (x.matches) { // If media query matches
-// 	  document.body.style.backgroundColor = "pink";
-// 	} else {
-// 	 document.body.style.backgroundColor = "yellow";
-// 	}
-//   }
-  
-//   var x = window.matchMedia('(max-width: 600px)');
-//   x.addEventListener(myFunction(x)); // Attach listener function on state changes
 
-
+//escondo table header cuando es un celular, y si es en PC lo muestro
   if (window.matchMedia("(max-width: 400px)").matches) {
 	console.log("menos de 400px");
 	
@@ -45,8 +35,6 @@ function obtenerListaEspecifica (id) {
 }
 
 
-
-obtenerListaEspecifica(id);
 
 
 function convertirStockNumericoEnEscala(elemento){
@@ -58,3 +46,5 @@ function convertirStockNumericoEnEscala(elemento){
 
 
 
+
+obtenerListaEspecifica(id);

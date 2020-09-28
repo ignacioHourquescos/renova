@@ -15,7 +15,6 @@ body {
 	text-align: center;
 	margin:0px;
 	padding:0px;
-	background-color: #000000;
 }
   
 .cabecera{
@@ -44,8 +43,6 @@ body {
 	text-shadow: 1px 1px 2px #000000;
 } 
 
-
-
 /*--------- CUSTOM LAYOUT ---------*/
 
 @import url("normalize.css");
@@ -54,7 +51,7 @@ body {
 /*------*/
 
 body {
-	background-color: #000000;
+	background-color: #ff9900;
     text-align: center;
 }
 
@@ -142,7 +139,7 @@ a {
 /*--------- COLORES --------*/
 
 .color1 {
-	background-color: rgb(253, 147, 8);
+	background-color: rgb(47, 47, 47);
 }
 
 /*////////// RESPONSIVE ////////////*/
