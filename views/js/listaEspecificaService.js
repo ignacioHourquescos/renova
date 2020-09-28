@@ -1,6 +1,6 @@
 // Al finalizarse de cargar el DOM:
-var server ="https://renovaapi.herokuapp.com";
-//var server ="http://localhost:5000";
+// var server ="https://renovaapi.herokuapp.com";
+var server ="http://localhost:5000";
 
 
 
@@ -22,6 +22,26 @@ function obtenerListaEspecifica (id) {
 		}); 
 		document.getElementById("nombreLista").innerHTML=data.agrupacion;
 	}));
+}
+
+// function myFunction(x) {
+// 	if (x.matches) { // If media query matches
+// 	  document.body.style.backgroundColor = "pink";
+// 	} else {
+// 	 document.body.style.backgroundColor = "yellow";
+// 	}
+//   }
+  
+//   var x = window.matchMedia('(max-width: 600px)');
+//   x.addEventListener(myFunction(x)); // Attach listener function on state changes
+
+
+  if (window.matchMedia("(max-width: 400px)").matches) {
+	console.log("menos de 400px");
+	
+} else {
+	console.log("mas de 400px");
+	document.getElementById("myTable").removeAttribute("data-show-header");
 }
 
 

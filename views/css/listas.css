@@ -142,12 +142,13 @@ a {
 /*--------- COLORES --------*/
 
 .color1 {
-	background-color: rgb(47, 47, 47);
+	background-color: rgb(253, 147, 8);
 }
 
 /*////////// RESPONSIVE ////////////*/
 
 @media only screen and (max-width: 480px) {
+
 	.competencias {
 		display:flex;
 		flex-direction:row;

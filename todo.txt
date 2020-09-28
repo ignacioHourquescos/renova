@@ -1,10 +1,7 @@
 TODO LUNES
 - 30 min  hacer ruta pra rodri - hacer ruta
-- 20 min  listas landing esta rota. copiar formato ofertas
-- 10 min  hacer push y mandar al pelado y a melena
-- 60 min  sacar header en mobile responsive
-- 120 min poner fitlros en cabeceras par asub agrupaciones
-- 10 min  etalle titulo. agregar Precio unitario final(En bidones 10% caja cerrada)
+- 120 min poner fitlros en cabeceras para subagrupaciones
+
 
 
 TODO MARTES
@@ -13,9 +10,14 @@ TODO MARTES
 
 
 LISTAS.HTML
-- detallar aumentos con google sheets
-
 - terminar lubri
 - menu 
 - agrupar por agrpuacion
 - detalle descuentos
+
+
+DONE
+- 20 min  listas landing esta rota. copiar formato ofertas
+- 10 min  etalle titulo. agregar Precio unitario final(En bidones 10% caja cerrada)
+- 60 min  sacar header en mobile responsive
+- 10 min  hacer push y mandar al pelado y a melena
