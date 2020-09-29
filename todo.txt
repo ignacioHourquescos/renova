@@ -1,7 +1,12 @@
 TODO LUNES
 - 30 min  hacer ruta pra rodri - hacer ruta
 - 120 min poner fitlros en cabeceras para subagrupaciones
-
+- sacar "-"de descirpcion de valvoline
+- valvoline corregir agrupaciones
+- corregir LOCX
+- agregar Wagner Lockheed
+- Agregar RAMA
+- Pulir index (no esta responsive) y lorem ipsum
 
 
 TODO MARTES
