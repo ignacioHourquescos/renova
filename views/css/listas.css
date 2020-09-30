@@ -52,7 +52,7 @@ body {
 
 body {
 	background-color: #ff9900;
-    text-align: center;
+ 
 }
 
 
@@ -80,6 +80,8 @@ a {
 	padding-top:5vmin;
 	padding-bottom:30vmin;
 }
+
+
 
 .competencias .competencia {
 	flex: 1 1 25%;
@@ -144,17 +146,17 @@ a {
 
 /*////////// RESPONSIVE ////////////*/
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 
-	.competencias {
+	 .competencias {
 		display:flex;
-		flex-direction:row;
-		max-width: 970px;
+		flex-direction:column;
+		flex-wrap:wrap;
+		max-width: 100%;
 		margin: 3%;
-		display: flex;
-		justify-content: center;
+		justify-content: left;
 	}
-	
+	 
 	.competencias .competencia {
 		width: 10%;
 		text-align: left;
@@ -163,7 +165,7 @@ a {
 	}
 
 	.competencias .competencia .card {
-		margin: 15px 25px;
+		margin: 15px 0px;
 		height: 100px;
 	}
 	.competencias .competencia .card::before {
