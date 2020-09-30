@@ -1,11 +1,24 @@
 TODO LUNES
-- 30 min  hacer ruta pra rodri - hacer ruta
-- 120 min poner fitlros en cabeceras para subagrupaciones
+- 30 min  hacer ruta pra rodri - hacer rutacode 
+- cambiar quiero abirr un luricentro
 
 
+LISTAS
+- hacer resposnive los cuadrados
 
-TODO MARTES
-- lanzar ofertas
+
+LISTAS ESPECIFICAS
+- poNER EN NEGRITA EL CODIGO Y EL Precio
+- VER COMO EXPONER STOCK
+
+menu en todas las paginas
+
+GOOGLE ADS
+- PONER PAGINA CON PASSWORD PARA ENTRAR A LAS ofertas Y A LAS LISTAS. tu nro de CUIT
+
+QUIERO ABRIR UN LUBRICENTRO
+- Darle un poco de formato al texto
+
 
 
 
@@ -16,8 +29,15 @@ LISTAS.HTML
 - detalle descuentos
 
 
-DONE
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - 20 min  listas landing esta rota. copiar formato ofertas
 - 10 min  etalle titulo. agregar Precio unitario final(En bidones 10% caja cerrada)
 - 60 min  sacar header en mobile responsive
 - 10 min  hacer push y mandar al pelado y a melena
+- 10min achicar data fiscal responsive
+- 10 min cambiar el tema de get notified
+- ARREGLAR ICONO WPP
+- 5 min cabiar footer creditos deiseño
+- 10 min ver iconos redes sociales

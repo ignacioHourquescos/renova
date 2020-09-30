@@ -52,9 +52,9 @@
 		 <ul class="nav-list">
 			 <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
 			 <li><a class="" href="views/html/listas.html" title="">Listas</a></li>
-			 <li><a class="" href="views/html/ofertas.html" title="">Ofertas</a></li>
+			 <li><a class="" href="views/html/login.html" title="">Ofertas</a></li>
 			 <li><a class="" href="views/html/faq.html" title="">Abrir un lubricentro</a></li>
-			 <li><a class="" href="views/html/resumenDeCuenta.html" title="" style="color:orange">Ingresar a mi cuenta</a></li>						
+			 <!-- <li><a class="" href="views/html/resumenDeCuenta.html" title="" style="color:orange">Ingresar a mi cuenta</a></li>						 -->
 		 </ul>	
 	 </nav>  <!-- end #menu-nav-wrap -->
 
@@ -65,28 +65,29 @@
 ================================================== -->
 <section id="home">
 
-	<ul class="home-social-list">
+	<ul class="home-social-list" style="z-index:20">
 		<li class="animate-intro">
 			  <a href="#"><i class="fa fa-facebook-square"></i></a>
 		</li>
 		<li class="animate-intro">
-			  <a href="#"><i class="fa fa-twitter"></i></a>
+			  <a href="#contactenos"><i class="fa fa-location-arrow"></i></a>
 		</li>
-		<li class="animate-intro">
+		<!-- <li class="animate-intro">
 			  <a href="#"><i class="fa fa-instagram"></i></a>
-		</li>	      
+		</li>	       -->
 	 </ul>
 		<div class="overlay"></div>
    			<div class="home-content-table">	
 			   	<div class="home-content-tablecell">
 					<div class="row">
 			   			<div class="col-twelve">		   			
-							<img src="./views/images/logoRenova.png" style="width:50%" alt="">
-						  	<h2 class="animate-intro">distribucion filtros & lubricantes<br></h2>
+							<img src="./views/images/logoRenova.png" id="logo"  alt="">
+						  	<h2 class="animate-intro" id="slogan">distribucion filtros & lubricantes<br></h2>
 						  	<div class="more animate-intro">
+
 								<a class="button stroke col-four columna" href="./views/html/listas.html">Lista de Precios</a>
-								<a class="button stroke col-four columna" href="./views/html/ofertas.html">Ofertas del mes</a>
-								<a class="button stroke col-four columna" href="./views/html/faq.html">Obtener comprobantes cliente #</a>
+								<a class="button stroke col-four columna" href="./views/html/login.html">Ofertas</a> 
+								<a class="button stroke col-four columna" href="./views/html/faq.html">Quiero abrir un lubricentro</a>
 						  	</div>							
 					  	</div> <!-- end col-twelve --> 
 					   </div> <!-- end row --> 
@@ -248,11 +249,13 @@
 
 <!-- MAPA
 ================================================== -->
+<a id="mapa"></a>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.276563599783!2d-58.46463768573651!3d-34.5971674646565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5fe22fe43fb%3A0xb6b273f06a3beed!2sDr.%20Adolfo%20Dickman%20984%2C%20C1416%20EHB%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1596747136653!5m2!1sen!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-   
+
 
 <!-- CONTACTO
 ================================================== -->
+<a id="contactenos"></a>
 <section id="contact">
 	<div class="overlay"></div>
 	<div class="row narrow section-intro with-bottom-sep animate-this">
@@ -331,31 +334,30 @@
 
 		  	<div class="col-three tab-full footer-about">       
 
-				<h4 class="h05">Infinity.</h4>
+				<h4 class="h05">RENOVA</h4>
 
-				<p class="col-nine"><a href="http://qr.afip.gob.ar/?qr=maNrG4Ts6bbFh6cV3q1D4g,," target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"></a></p>	            
+				<p class="col-nine"><a href="http://qr.afip.gob.ar/?qr=maNrG4Ts6bbFh6cV3q1D4g,," target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" id="qrAfip" ></a></p>	            
 
 			  </div> <!-- end footer-about -->
 
 		  	<div class="col-three tab-full footer-social">
 
-		  		<h4 class="h05">Follow Us.</h4>
+		  		<h4 class="h05">Seguinos</h4>
 
 		  		<ul class="list-links">
-		  			<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Instagram</a></li>
-						<li><a href="#">Behance</a></li>
-						<li><a href="#">Dribble</a></li>						
+		  				<li><a href="#">Mail</a></li>
+						  <li><a href="#">Facebook</a></li>
+						  <li><a href="#">Google</a></li>
+										
 					</ul>
 
-		  	</div> <!-- end footer-social -->  
+		  	</div> 
 
-		  	<div class="col-four tab-full footer-subscribe end">
+		  	 <!-- <div class="col-four tab-full footer-subscribe end">
 
-		  		<h4 class="h05">Get Notified.</h4>
+		  		<h4 class="h05">Solicita codigo de acceso a las lsitas</h4>
 
-		  		<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa.</p>
+		  		<p>ingresa tu telefono</p>
 
 		  		<div class="subscribe-form">
 		  	
@@ -363,7 +365,7 @@
 
 							<input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email" required=""> 
 	   		
-			   			<!-- <input type="submit" name="subscribe" > -->
+			   			<input type="submit" name="subscribe" >
 			   			<button><i class="icon-mail"></i></button>
 		   	
 		   				<label for="mc-email" class="subscribe-message"></label>
@@ -372,7 +374,7 @@
 
 		  		</div>
 		  			   	
-		  	</div> <!-- end footer-subscribe -->      	    
+		  	</div>  	     -->
 
 		  </div> <!-- end row -->
 
@@ -385,7 +387,7 @@
 			<div class="col-twelve">
 				<div class="copyright">
 					<span>crafted by <a href="http://www.sideral.dev/" style="color:yellowgreen">sideral.dev</a></span>
-					<span>Creditos diseño: Copyright© <a href="http://www.styleshout.com/">  styleshout</a></span>
+					<span>Template <a href="http://www.styleshout.com/">  styleshout</a></span>
 				</div>
 			</div>
 		</div>

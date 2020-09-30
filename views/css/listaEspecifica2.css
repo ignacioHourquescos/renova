@@ -107,7 +107,14 @@ td, th{
     }
 	thead{
 		display:none;
-	}
+    }
+    
+    tr > td > div >  div:first-child{
+        font-weight: bold;
+    }
+    tr > td > div >  div:nth-child(3){
+        font-weight: bold;
+    }
     
   }
 
@@ -119,3 +126,4 @@ td, th{
   padding: 0;
   margin: 0;
 }
+

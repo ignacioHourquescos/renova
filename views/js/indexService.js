@@ -32,11 +32,11 @@ const constantes ={
         $('#WAButton').floatingWhatsApp({
           phone: '5491165106333', //WhatsApp Business phone number
            //headerTitle: 'Escribinos!', //Popup Title
-          popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
+          //popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
           showPopup: true, //Enables popup display
-          buttonImage: '<img src="images/whatsappModern.png" />', //Button Image
+          buttonImage: '<img src="views/images/whatsappModern.png" />', //Button Image
           //headerColor: 'crimson', //Custom header color
-          backgroundColor: 'crimson', //Custom background button color
+          //backgroundColor: 'crimson', //Custom background button color
           position: "right" //Position: left | right
    
         });
