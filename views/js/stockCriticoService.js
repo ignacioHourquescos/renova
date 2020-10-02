@@ -6,11 +6,10 @@ var server ="https://renovaapi.herokuapp.com";
 function obtenerListaArticulosBajoStock () {
 	$(document).ready($.getJSON(server+"/stock", function (data) { 
 		for(i=0; i<data.length;i++){
-
 			let unidadesVendidasPorMes= data[i].unidades*1.3;
 			console.log(unidadesVendidasPorMes);
 			if (data[i].cant_stock==0){
-				data[i].cant_stock=1;
+				data[i].cant_stock=0;
 			}
 			data[i].stockCritico=unidadesVendidasPorMes/data[i].cant_stock;
 			// let ventaMensual[i]=data.resultado[i].unidades*1.30;
