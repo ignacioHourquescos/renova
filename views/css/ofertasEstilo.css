@@ -22,8 +22,8 @@ body {
 	background-size: 100%;
 	height:15rem;
 	margin:0px;
-	padding:5rem;
-	padding-bottom:10rem;
+	padding:5vh;
+	padding-bottom:10vh;
 }
   
   
@@ -94,11 +94,11 @@ body {
 }
 
 .imagenKit{
-    height:25vmin;
+    height:25vh;
   }
 
 .imagenOferta{
-    height:35vmin;
+    height:35vh;
 }
 
 .rectanguloOfertas{

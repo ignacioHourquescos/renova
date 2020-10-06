@@ -8,7 +8,7 @@
 		<link rel="stylesheet" 		href="./views/css/base.css">
 		<link rel="stylesheet" 		href="./views/css/vendor.css">
 		<link rel="stylesheet" 		href="./views/css/main.css">
-	
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<script src="../js/src/jquery.js"></script>
 		<script src="../js/src/helpers.js"></script>
 		<script src="../js/src/modernizr.js"></script>
@@ -21,7 +21,6 @@
 
 <body>
 <!--Div where the WhatsApp will be rendered-->
-<div id="WAButton" style="font-family: Arial, Helvetica, sans-serif; z-index:10;"></div>
 
 
 <!-- SIDE MENU
@@ -61,18 +60,29 @@
 		<h1 id="nombreLista">Listas De Precios</h1>
 		<h2 id="ultimaActualizacion"></h2>
 </div>
+
 	<div class="competenciaPlantilla competencia">
-			<div class="card">
+			<div class="card" id="card1">
 				<h2><a class="link titulo" href="listaEspecifica2.html?id="></a></h2>
+				<h3 class="aumento"></h3>
 			</div>
 		</div>		
 	<div class="competencias"><a class="link titulo" href="listaEspecifica2.html?id=" ></a></div>
 </section>
 
+<div class="spinner-border" role="status">
+	<span class="sr-only" style="color:black;">Loading...</span>
+</div>
+
 
 </body>
+
+
+
+
+
 <script src="../js/src/helpers.js"></script>
-	<script src="../js/src/plugins.js"></script>
-	<script src="../js/src/main.js"></script>
-	<script src="../js/listasService.js"></script>
+<script src="../js/src/plugins.js"></script>
+<script src="../js/src/main.js"></script>
+<script src="../js/listasService.js"></script>
 </html>

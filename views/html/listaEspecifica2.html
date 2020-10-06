@@ -73,10 +73,14 @@
 	<h1 id="nombreLista"></h1>
 
 	<h2>Precios unitarios Finales.</h2>
+	<h2 id="descuento"></h2>
 </div>
 
 
+
 <section id="seccionLista">
+
+
 	<div class="intro-wrap col-sm-12" style="height:80%;">
       		<div class="col-sm-12"></div>			 
 				<div class="container-fluid tabla" >  
@@ -92,16 +96,16 @@
 							data-show-print="true"					 
 							data-toolbar-align="left"
 							data-show-header="false"
-							data-group-by-field="r">
+							data-group-by-field="r"
+							data-loading-template="loadingTemplate">
 							<thead class="thead-dark" > 
+							
 							  <tr> 
 								<th data-field="id"data-width="10" data-width-unit="%" >  								Articulo		</span style="text-align: center;"></th> 
 								<th data-field="d" class="text-wrap">  													Descripcion		</span style="text-align: left;"> </th> 
 								<th data-field="r" data-width="20" data-width-unit="%"data-card-visible="false">  		Rubro			</span> </th> 
-								
-								<!--<th data-field="s" data-width="90" class="text-right" >  Precio sin IVA 	</span> </th> -->
 								<th data-field="pf" data-width="90" data-align="center">  								Precio con IVA 	 </th>  
-								<th data-field="s" data-width="90" class="text-right" >  Precio sin IVA 	</span> </th> -->
+								<th data-field="s" data-width="90" class="text-right" >     							Stock 			</span> </th> -->
 							
 							  </tr> 
 						</thead> 
@@ -109,7 +113,9 @@
 				</div> 
 			</div>   		
 </section>
-
+<div class="spinner-border" role="status">
+	<span class="sr-only" style="color:black;">Loading...</span>
+  </div>
 
 	</body>
 

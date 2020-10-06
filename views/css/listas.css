@@ -55,7 +55,39 @@ body {
  
 }
 
+.aumento{
+	margin:0px;
+	padding:0rem 1rem;
+	text-align: center;
+}
 
+.titulo{
+	padding:0px;
+	margin:0px;
+}
+
+
+#card1{
+	display:flex;
+	flex-direction: column;
+	text-align:center;
+	align-items: center;
+	align-content: center;
+	justify-content:center;
+	justify-content:center;
+}
+
+#card1 > h2{
+	padding:0px;
+	margin:0px;
+}
+
+#card1 > h3{
+	padding:0px;
+	margin:0px;
+	color:rgb(236, 178, 69);
+	font-size:1.4rem;
+}
 
 a {
 	text-decoration: none;

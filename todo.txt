@@ -25,7 +25,6 @@ QUIERO ABRIR UN LUBRICENTRO
 LISTAS.HTML
 - terminar lubri
 - menu 
-- agrupar por agrpuacion
 - detalle descuentos
 
 
@@ -41,3 +40,4 @@ LISTAS.HTML
 - ARREGLAR ICONO WPP
 - 5 min cabiar footer creditos deiseño
 - 10 min ver iconos redes sociales
+- agrupar por agrpuacion

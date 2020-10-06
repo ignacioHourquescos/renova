@@ -1,5 +1,5 @@
 // Al finalizarse de cargar el DOM:
- var server ="https://renovaapi.herokuapp.com";
+var server ="https://renovaapi.herokuapp.com";
 //var server ="http://localhost:5000";
 
 
@@ -16,11 +16,13 @@ function obtenerListaEspecifica (id) {
 			data.resultado[i].pf="$"+precioConIva;
 			data.resultado[i].p="$"+data.resultado[i].p.toFixed(0);
 			data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
+
 		}		
 		$('table').bootstrapTable({ 
 			data: data.resultado,
 		}); 
 		document.getElementById("nombreLista").innerHTML=data.agrupacion;
+		document.getElementById("descuento").innerHTML=data.descuento;
 	}));
 }
 
@@ -42,7 +44,7 @@ function convertirStockNumericoEnEscala(elemento){
 		return "DISPONIBLE"
 	} 	
 	else	
-		return "CONSULTAR"
+		return "**consultar**"
 }
 
 
