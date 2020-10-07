@@ -13,8 +13,12 @@ function cargarOfertasMensuales () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".oferta").clone().removeClass("oferta");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			  $(divCompetencia).find('.detalle').text(data[i].d);
+			  if(data[i].p<100){
+				$(divCompetencia).find('.precio').html('<a href="listaEspecifica2.html?id='+data[i].p+'"><h1>Ir a Lista</h1></a>');
+			  }else{
+				$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			  }
 			$(divCompetencia).find('.imagenOferta').attr("src",data[i].img);
     	  	$(".ofertas").append(divCompetencia);
 		};
@@ -35,6 +39,7 @@ function cargarKits () {
     	  	$(".kits").append(divCompetencia);
 		};
 		$("#plantilla2").remove();
+		$(".spinner-border").remove();
 	});
 }
 
