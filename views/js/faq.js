@@ -47,7 +47,7 @@ function cargarPreguntas () {
 function insertarParrafos(elemento){
   var node = document.getElementById("campoParrafo");
   for (var i=0; i<elemento.length;i++){
-    let parrafo=document.createElement("h2");
+    let parrafo=document.createElement("h4");
     parrafo.style.color="#ffffff";
     parrafo.innerHTML=elemento[i];
     node.appendChild(parrafo);

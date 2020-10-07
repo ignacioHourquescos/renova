@@ -159,7 +159,7 @@ p.lead {
   font-family: "montserrat-regular", sans-serif;
   font-size: 2rem;
   line-height: 1.8;
-  color: #4f4f4f;
+  color: #f1f0f0;
   margin-bottom: 3.6rem;
 }
 @media only screen and (max-width: 768px) {
@@ -2005,7 +2005,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   color: #FFFFFF;
 }
 #services .section-intro .lead {
-  color: rgba(242, 242, 242, 0.4);
+  color: rgba(255, 255, 255, 0.8);
 }
 #services .services-content {
   text-align: center;
@@ -2020,7 +2020,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 0 50px;
 }
 #services .services-list .service-item p {
-  color: rgba(242, 242, 242, 0.5);
+  color: rgba(255, 255, 255);
 }
 #services .services-list .icon {
   display: inline-block;

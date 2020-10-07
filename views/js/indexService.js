@@ -1,8 +1,11 @@
 const constantes ={
   nosotros: 
   "Somos una empresa familiar y referente dentro del segmento de filtros y lubricantes.\
-  Con mas de 35 años de experiencia en el mercado de automotriz, contamos con mas de 300 \
-  clientes activos,  que confían en nosotros desde nuestros inicios",
+  En 1976 cuando habia algunos pocos modelos de auto \
+  comenzamos a trabajar con la marca FRAM. \
+  Hoy, despues de 40 años seguimos  acompañando a nuestros\
+  clientes en un contexto donde el mundo de los repuestos cada vez e complejiza mas\
+  debido a la creciente cantidad de modelos",
   
   tituloServicios1:
   "VENTA AL POR MAYOR DE FITLROS Y LUBRICANTES",
