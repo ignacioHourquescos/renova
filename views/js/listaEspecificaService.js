@@ -40,7 +40,7 @@ function obtenerListaEspecifica (id) {
 
 
 function convertirStockNumericoEnEscala(elemento){
-	if (elemento>20){
+	if (elemento>15){
 		return "DISPONIBLE"
 	} 	
 	else	
