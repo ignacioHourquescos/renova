@@ -27,9 +27,26 @@ function cargarOfertasMensuales () {
 
 }
 
-function cargarKits () {
+function cargarOfertasFram () {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertasFram", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".ofertaFiltro").clone().removeClass("ofertaFiltro");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+		  	$(divCompetencia).find('.detalle').text(data[i].d);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".ofertaFiltros").append(divCompetencia);
+		};
+		$("#plantilla2").remove();
+		$(".spinner-border").remove();
+	});
+}
+
+
+function cargarKits () {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasKits", function (data) {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".kit").clone().removeClass("kit");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
@@ -108,11 +125,10 @@ function cargarSelenia() {
 
 
 
-cargarOfertasMensuales();
+cargarOfertasFram();
 cargarKits(); 
 cargarValvoline();
 cargarMotul();
 cargarTotal();
 cargarSelenia();
-
-//cargarOfertasFram();
+cargarOfertasMensuales();

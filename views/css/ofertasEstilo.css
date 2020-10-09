@@ -56,7 +56,7 @@ body {
 }
 .container-fluid #subtitulo{
     color:rgb(251, 88, 13);
-    font-size:4vmin;
+    font-size:rem;
     padding-bottom: 2vmin;
     text-align:center;
 }
@@ -89,16 +89,17 @@ body {
 
 .detalle{
    color:black;
+   font-size:1.3rem;
    height:5em;  
    text-align:center;
 }
 
 .imagenKit{
-    height:25vh;
+    height:13rem;
   }
 
 .imagenOferta{
-    height:35vh;
+    height:20rem;
 }
 
 .rectanguloOfertas{
@@ -157,6 +158,9 @@ body {
     
     .imagenOferta{
         height:20vmin;
+    }
+    .detalle{
+        font-size:1.2rem;
     }
     
   }
