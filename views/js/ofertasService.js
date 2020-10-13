@@ -38,7 +38,7 @@ function cargarOfertasFram () {
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".ofertaFiltros").append(divCompetencia);
 		};
-		$("#plantilla2").remove();
+		$("#plantilla7").remove();
 		$(".spinner-border").remove();
 	});
 }
