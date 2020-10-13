@@ -16,9 +16,7 @@ body {
 	margin:0px;
     padding:0px;    
 }
-.blanco{
-    background-color:whitesmoke;
-}
+
 
 .cabecera{
 	background-color: #000000;
@@ -69,13 +67,13 @@ body {
 .container-fluid #subtitulo{
     /* background-image: linear-gradient( 45deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent); */
     background-color: orange;
+    font-style: italic;
     background-size: 5px 5px;
     margin:0 8rem;
-
-    color:black;
+    color:red;
     font-size:2.5rem;
-    text-align:center;
-    padding:1rem 0;
+    text-align:right;
+    padding-top:2rem;
 }
 
 
@@ -113,12 +111,10 @@ body {
    letter-spacing: 0.1rem;
 }
 
-.imagenKit{
-    height:13vh;
-  }
 
-.imagenOferta{
-    height:20rem;
+
+.imagenOferta, .imagenKit{
+    height:30vh;
 }
 
 .rectanguloOferta{
@@ -177,14 +173,15 @@ body {
         font-size:2.2rem;
     }
 
+    .imagenOferta, .imagenKit{
+        height:12vh;
+    }
     .container-fluid #subtitulo{
         font-size:1rem;
         margin:0px;
         
     }
-    .imagenOferta{
-        height:15vh;
-    }
+
     .detalle{
         font-size:0.8rem;
     }
