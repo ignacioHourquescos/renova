@@ -108,13 +108,11 @@ body {
    letter-spacing: 0.1rem;
 }
 
-.imagenKit{
+.imagenKit .imagenOferta{
     height:13vh;
   }
 
-.imagenOferta{
-    height:20rem;
-}
+
 
 .rectanguloOferta{
    
