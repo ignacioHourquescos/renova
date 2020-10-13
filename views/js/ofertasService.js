@@ -15,7 +15,7 @@ function cargarOfertasMensuales () {
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 			  $(divCompetencia).find('.detalle').text(data[i].d);
 			  if(data[i].p<100){
-				$(divCompetencia).find('.precio').html('<a href="listaEspecifica2.html?id='+data[i].p+'"><h1>Ir a Lista</h1></a>');
+				$(divCompetencia).find('.precio').html('<a id="irALista" href="listaEspecifica2.html?id='+data[i].p+'"><h1>Ir a Lista</h1></a>');
 			  }else{
 				$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
 			  }
