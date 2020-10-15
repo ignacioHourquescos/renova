@@ -14,21 +14,26 @@ body {
 	width:100%;
 	text-align: center;
 	margin:0px;
-	padding:0px;
+    padding:0px;    
 }
-  
+
+
 .cabecera{
-	background-color: #000000;
-	background-size: 100%;
+    background-color: #000000;
+    background-image: linear-gradient( 135deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent);
+    background-size: 10px 10px;
+
 	height:15rem;
 	margin:0px;
 	padding:5vh;
-	padding-bottom:10vh;
+    padding-bottom:10vh;
+    margin-bottom:3rem;
 }
   
   
 .cabecera h1{
-	font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", serif;
+    
 	font-size: 4.8rem;
 	color:white;
 	text-shadow: 2px 2px 4px #000000;
@@ -44,36 +49,49 @@ body {
 } 
 
 /*///////////////////////////////TITULO Y SIBTITULO*/
+
 .container-fluid #titulo{
-    color:black;
-    text-decoration:underline;
+   background-color:black;
+    color:rgb(255, 255, 255);
     font-family: "librebaskerville-bold", serif;
-    margin-top:3vmin;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top:2rem;
+    margin:0 8rem;
     font-size:8vmin;
-    padding-top:10vmin;
-    text-shadow: 2px 2px 4px rgb(83, 83, 83);
+    padding-bottom:2rem;
+    text-shadow: 4px 4px 8px rgb(12, 12, 12);
+    transform: skewY(-2deg) translateY(+2rem);
+    z-index:1;
+
    
 }
 .container-fluid #subtitulo{
-    color:rgb(251, 88, 13);
-    font-size:4vmin;
-    padding-bottom: 2vmin;
-    text-align:center;
+    /* background-image: linear-gradient( 45deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent); */
+    background-color: orange;
+    font-style: italic;
+    background-size: 5px 5px;
+    margin:0 8rem;
+    color:rgb(0, 0, 0);
+    font-size:2.5rem;
+    text-align:right;
+    padding-top:2rem;
 }
 
-#seccionLista{
-    background-color: black;
-  
+
+.intro-wrap {
+    margin-bottom:5rem;
 }
+
 
 /*///////////////////////////////KITS y OFERTAS */
 .titulo{
     background-color: black;
-    padding-left: 0.5em;
     text-align: center;
-    padding:0.4em;
+    padding:0.4em 0;
     color:whitesmoke;
-    font-size: 3.5vmin;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
 
 
 }
@@ -89,20 +107,24 @@ body {
 
 .detalle{
    color:black;
+   font-size:1.3rem;
    height:5em;  
    text-align:center;
+   letter-spacing: 0.1rem;
 }
 
-.imagenKit{
-    height:25vh;
-  }
 
-.imagenOferta{
-    height:35vh;
+
+.imagenOferta, .imagenKit{
+    height:30vh;
 }
 
-.rectanguloOfertas{
-   height:15%;
+.rectanguloOferta{
+   
+   -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+   background-color: white;
 }
 
 .ofertas {
@@ -113,11 +135,8 @@ body {
     justify-content: left;;
 }
 
-.rectanguloOferta{
-    -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    background-color: white;
+#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla{
+  padding:1px;
 
 }
 
@@ -138,10 +157,15 @@ body {
     }
 
     .precio{
-        font-size:3em;  
+        font-size:1.5rem;  
         text-align:center;
         padding-right: 0
 
+    }
+    #irALista >h1{
+        font-size:1.5rem;  
+        text-align:center;
+        padding-right: 0
     }
     .cabecera{
         padding-top:8em;
@@ -151,14 +175,29 @@ body {
         font-size:2.2rem;
     }
 
-    .imagenKit{
-        height:25vmin;
-      }
-    
-    .imagenOferta{
-        height:20vmin;
+    .imagenOferta, .imagenKit{
+        height:12vh;
     }
-    
+    .container-fluid #subtitulo{
+        font-size:1rem;
+        margin:0px;
+        
+    }
+
+    .detalle{
+        font-size:0.8rem;
+    }
+    .titulo{
+        font-size:1rem;
+    }
+    .container-fluid #titulo{
+        padding-top:0.5rem;
+        font-size:2rem;
+        padding-bottom:0.5rem;
+        margin:0;
+       
+    }
+  
   }
 
 

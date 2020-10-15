@@ -17,6 +17,7 @@
 		<script src=									"../js/src/jquery.js"></script>
 		<script src=									"../js/src/helpers.js"></script>
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href=	"../css/ofertasEstilo.css">			
 	</head>
 
@@ -30,7 +31,7 @@
 
 <!-- SIDE MENU
 ================================================== -->
-<header>
+<!-- <header>
 	<a id="header-menu-trigger" href="#0">
 		<span class="header-menu-text">Menu</span>
 		<span class="header-menu-icon"></span>
@@ -44,24 +45,27 @@
 			 <li><a class="" href="ofertas.html" 			title="">Ofertas</a></li>
 			 <li><a class="" href="faq.html" 				title="">Abrir un lubricentro</a></li>		
 		 </ul>	
-	 </nav>  <!-- end #menu-nav-wrap -->
-</header> <!-- end header -->  
+	 </nav>   end #menu-nav-wrap 
+</header>  end header -->  
 
 <body>
+	
 <!-- SECCION DE LISTAS
 ================================================== -->
 <div class="container-fluid cabecera"> 
 	<h1 id="nombreLista">Ofertas Vigentes</h1>
-	<h2 id="ultimaActualizacion">PRECIOS FINALES / Sep 2020</h2>	
+	<h2 id="ultimaActualizacion">PRECIOS FINALES / Oct 2020</h2>	
 	
 </div>
-<section class="container-fluid">
+<section class="container-fluid ">
 	<div class="intro-wrap col-sm-12">
-       	<div class="container-fluid"><h1 id="titulo">OFERTAS</h1></div>		
-       	<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA. 12 DE CADA OFERTA</h1></div> 	 
+       	<div class="container-fluid"><h1 id="titulo">OFERTAS</h1>			</div>	
+		   <div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA. 12 DE CADA OFERTA</h1></div> 
+
+		   <div class="spinner-border" role="status"><span class="sr-only"></span></div>	 
 			<div class="container-fluid competencias ofertas" style="justify-content: left;" >
 				<div class="row">
-				  	<div class="col-6 col-sm-6 oferta" id="plantilla" style="padding:1em;">
+				  	<div class="col-3 col-sm-3 oferta" id="plantilla">
 					  	<div class="rectanguloOferta">
 							<h2 class="titulo"></h2>
 							<h5 class="detalle"></h5>
@@ -74,24 +78,45 @@
 	</div>
 </section>
 
+
+<section class="container-fluid">
+	<div class="intro-wrap col-sm-12 negro">
+			<div class="container-fluid"><h1 id="titulo">FILTROS</h1></div>	
+			<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: 48 filtros surtidos</h1></div> 	 	
+		<div class="container-fluid">  
+			<div class="container-fluid  competencias ofertaFiltros" style="justify-content: left;" >
+				<div class="row">
+					  <div class="col-3 col-sm-3 ofertaFiltro" id="plantilla7" >
+						  <div class="rectanguloOferta">
+							<h2 class="titulo"></h2>
+							<h5 class="detalle"></h5>
+							<img class="imagenKit">
+							<h2 class="precio"></h2>
+						  </div>
+					</div>	  
+			</div> 
+		</div>
+	</div>  
+</div>
+</section>
+
+
  
 	<section class="container-fluid">
 		<div class="intro-wrap col-sm-12">
-				<div class="container-fluid"><h1 id="titulo">Kit Filtros</h1></div>	
-				<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: 12 KITS SURTIDOS</h1></div> 	 
-	
+				<div class="container-fluid"><h1 id="titulo">KIT FILTROS</h1></div>	
+				<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: 6 KITS SURTIDOS</h1></div> 	 	
 			<div class="container-fluid">  
 				<div class="container-fluid  competencias kits" style="justify-content: left;" >
 					<div class="row">
-					  	<div class="col-6 col-sm-4 kit" id="plantilla2" style="padding:1em;">
+					  	<div class="col-4 col-sm-3 kit" id="plantilla2">
 						  	<div class="rectanguloOferta">
 								<h2 class="titulo"></h2>
 								<h5 class="detalle"></h5>
 								<img class="imagenKit">
 								<h2 class="precio"></h2>
 						  	</div>
-						</div>
-					  
+						</div>	  
 				</div> 
 			</div>
 		</div>  
@@ -100,14 +125,13 @@
 
 
 <section class="container-fluid">
-	<div class="intro-wrap col-sm-12">
-			<div class="container-fluid"><h1 id="titulo">Valvoline</h1></div>	
+	<div class="intro-wrap col-sm-12 negro">
+			<div class="container-fluid"><h1 id="titulo">VALVOLINE</h1></div>	
 			<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: Caja Cerrada</h1></div> 	 
-
 		<div class="container-fluid">  
 			<div class="container-fluid  competencias valvolineOfertas" style="justify-content: left;" >
 				<div class="row">
-					  <div class="col-6 col-sm-4 valvoline" id="plantilla3" style="padding:1em;">
+					  <div class="col-3 col-sm-3 valvoline" id="plantilla3">
 						  <div class="rectanguloOferta">
 							<h2 class="titulo"></h2>
 							<h5 class="detalle"></h5>
@@ -125,13 +149,12 @@
 
 <section class="container-fluid">
 	<div class="intro-wrap col-sm-12">
-			<div class="container-fluid"><h1 id="titulo">Motul<h1></div>	
+			<div class="container-fluid"><h1 id="titulo">MOTUL<h1></div>	
 			<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: Caja Cerrada</h1></div> 	 
-
 		<div class="container-fluid">  
 			<div class="container-fluid  competencias motulOfertas" style="justify-content: left;" >
 				<div class="row">
-					  <div class="col-6 col-sm-4 motul" id="plantilla4" style="padding:1em;">
+					  <div class="col-4 col-sm-3 motul" id="plantilla4">
 						  <div class="rectanguloOferta">
 							<h2 class="titulo"></h2>
 							<h5 class="detalle"></h5>
@@ -147,15 +170,14 @@
 </section>
 
 
-<section class="container-fluid">
-	<div class="intro-wrap col-sm-12">
-			<div class="container-fluid"><h1 id="titulo">Total<h1></div>	
+<section class="container-fluid ">
+	<div class="intro-wrap col-sm-12 negro">
+			<div class="container-fluid"><h1 id="titulo">TOTAL<h1></div>	
 			<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: Caja Cerrada</h1></div> 	 
-
 		<div class="container-fluid">  
 			<div class="container-fluid  competencias totalOfertas" style="justify-content: left;" >
 				<div class="row">
-					  <div class="col-6 col-sm-4 total" id="plantilla5" style="padding:1em;">
+					  <div class="col-4 col-sm-3 total" id="plantilla5">
 						  <div class="rectanguloOferta">
 							<h2 class="titulo"></h2>
 							<h5 class="detalle"></h5>
@@ -172,15 +194,14 @@
 
 
 
-<section class="container-fluid">
+<section class="container-fluid blanco">
 	<div class="intro-wrap col-sm-12">
-			<div class="container-fluid"><h1 id="titulo">Selenia<h1></div>	
+			<div class="container-fluid"><h1 id="titulo">SELENIA<h1></div>	
 			<div class="container-fluid"><h1 id="subtitulo">COMPRA MINIMA: Caja Cerrada</h1></div> 	 
-
 		<div class="container-fluid">  
 			<div class="container-fluid  competencias seleniaOfertas" style="justify-content: left;" >
 				<div class="row">
-					  <div class="col-6 col-sm-4 selenia" id="plantilla6" style="padding:1em;">
+					  <div class="col-4 col-sm-3 selenia" id="plantilla6">
 						  <div class="rectanguloOferta">
 							<h2 class="titulo"></h2>
 							<h5 class="detalle"></h5>
