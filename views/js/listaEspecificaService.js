@@ -23,6 +23,7 @@ function obtenerListaEspecifica (id) {
 		}); 
 		document.getElementById("nombreLista").innerHTML=data.agrupacion;
 		document.getElementById("descuento").innerHTML=data.descuento;
+		$(".spinner-border").remove();
 	}));
 }
 

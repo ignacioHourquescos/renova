@@ -16,6 +16,7 @@ function cargarListas () {
 			$(".competencias").append(divCompetencia);
 			$(divCompetencia).show();
 		};
+		$(".spinner-border").remove();
 	});
 	
 }
