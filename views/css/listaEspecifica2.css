@@ -137,7 +137,7 @@ td, th{
 
 
 .search-input{
-    background-color:rgba(233, 175, 17, 0.796) !important;
+    background-color:rgba(247, 245, 245, 0.796) !important;
     border:4px rgb(240, 146, 24) solid !important;
 
 }
@@ -148,3 +148,11 @@ td, th{
     background-color: black;
     z-index:10 !important;
   }
+
+.fixed-table-header{
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    background-color: black;
+    z-index:10 !important;
+}

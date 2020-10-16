@@ -122,6 +122,6 @@ function convertirStockNumericoEnEscala(elemento){
 obtenerListaEspecifica(id);
 
 
-document.getElementsByClassName("search-input").placeholder="buscar";
-
-
+$( document ).ready(function() {
+    document.getElementsByClassName("search-input").placeholder="Buscar por Codigo";
+});
