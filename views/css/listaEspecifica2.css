@@ -111,10 +111,14 @@ td, th{
     
     tr > td > div >  div:first-child{
         font-weight: bold;
+        text-decoration: underline overline;
     }
-    tr > td > div >  div:nth-child(3){
+     tr > td > div >  div:nth-child(5){
         font-weight: bold;
-    }
+        font-style: italic;
+        
+      
+    } 
     
   }
 
@@ -127,3 +131,8 @@ td, th{
   margin: 0;
 }
 
+
+.search-input{
+    background-color:rgba(233, 175, 17, 0.796) !important;
+    border:4px rgb(240, 146, 24) solid !important;
+}
