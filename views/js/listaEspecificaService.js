@@ -17,7 +17,7 @@ function obtenerListaEspecifica (id) {
 				let precioConIva=(data.resultado[i].p*1.21).toFixed(0); 									//calculo VALOR precio con IVA
 				data.resultado[i].p= sacarDescuetnoTamboresyBaldes(id, data.resultado[i].id,precioConIva);	// Calculo descuentos en base a Agrupacion y tipo de producto
 				data.resultado[i].s="Stock: "+stock;
-				data.resultado[i].pf="Unitario Final x uni:\xa0\xa0\xa0$"+precioConIva;						//Concateno UNITARIO: al precio unitario				
+				data.resultado[i].pf="Unitario Final x unid:\xa0\xa0\xa0$"+precioConIva;						//Concateno UNITARIO: al precio unitario				
 			}		
 		}
 		else {

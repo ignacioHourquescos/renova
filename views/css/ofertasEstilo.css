@@ -20,7 +20,6 @@ body {
 
 .cabecera{
     background-color: #000000;
-    background-image: linear-gradient( 135deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent);
     background-size: 10px 10px;
 
 	height:15rem;
@@ -97,13 +96,17 @@ body {
 }
 
 .precio{
-  text-align: right;
+  text-align: center;
+  font:2rem;
+  text-shadow: 1px 1px #38383882;
   font-size:4em;  
-  color:orangered;
+  color: rgb(240, 146, 24);
   padding-top:0.25em;
   padding-bottom: 0.5em;
   padding-right: 0.5em;
 }
+
+
 
 .detalle{
    color:black;
@@ -112,11 +115,25 @@ body {
    text-align:center;
    letter-spacing: 0.1rem;
 }
+#descripcionKit{
+    height:2em ;     
+}
+#descripcionValvolineVarios{
+    height:1rem ;  
+    font-size:1rem;   
+}
+#descripcionValvoline{
+    height:1rem ;  
+    font-size:1rem;   
+}
 
 
-
-.imagenOferta, .imagenKit{
+.imagenOferta {
     height:30vh;
+}
+
+.imagenKit {
+    height:20vh;
 }
 
 .rectanguloOferta{
@@ -135,11 +152,23 @@ body {
     justify-content: left;;
 }
 
-#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla{
+#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla, #plantilla8{
   padding:1px;
 
 }
 
+
+#promoDelMes{
+    height:10rem;
+    border:1px black solid;
+    font-style: italic;
+    background-size: 5px 5px;
+    margin:0 8rem;
+    color:rgb(0, 0, 0);
+    font-size:2.5rem;
+    text-align:center;
+    padding-top:0rem;
+}
 /*/////////////////////////RESPONSIVE//*/
 @media only screen and (max-width: 450px) {
     section .container-fluid{
@@ -197,7 +226,15 @@ body {
         margin:0;
        
     }
+     #promoDelMes{
+        font-size:1.5rem ;
+        margin:0px;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
   
+
+
   }
 
 
@@ -205,4 +242,10 @@ body {
     transition: .5s;
   transform: scale(1.1);
   z-index:10;
+}
+
+
+.competencias {
+    margin-bottom: 0px auto !important;
+
 }
