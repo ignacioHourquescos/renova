@@ -22,7 +22,7 @@
 	  margin:0px;
 	  padding:5rem;
 	  padding-bottom:10rem;
-	  
+	  z-index:20;
   }
   
   
@@ -33,14 +33,16 @@
 	  color:white;
 	  text-shadow: 2px 2px 4px #000000;
 	  font-style: normal;
-	  text-rendering: optimizeLegibility;
+      text-rendering: optimizeLegibility;
+      z-index:20;
   }
   
   .cabecera h2{
 	  font-size:4vmin;
 	  text-align:center;
 	  color:white;
-	  text-shadow: 1px 1px 2px #000000;
+      text-shadow: 1px 1px 2px #000000;
+      z-index:20;
   } 
 
   /*///////////////////////////////TITULO Y SIBTITULO*/
@@ -111,13 +113,15 @@ td, th{
     
     tr > td > div >  div:first-child{
         font-weight: bold;
-        text-decoration: underline overline;
+        font-size: 1.8rem;
+        text-decoration: underline ;
     }
      tr > td > div >  div:nth-child(5){
         font-weight: bold;
         font-style: italic;
-        
-      
+    } 
+    tr > td > div >  div:nth-child(2){
+        font-size: 1rem;
     } 
     
   }
@@ -135,4 +139,13 @@ td, th{
 .search-input{
     background-color:rgba(233, 175, 17, 0.796) !important;
     border:4px rgb(240, 146, 24) solid !important;
+
 }
+.fixed-table-toolbar{
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    background-color: black;
+
+    z-index:10 !important;
+  }
