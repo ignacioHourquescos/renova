@@ -1,7 +1,7 @@
 // Al finalizarse de cargar el DOM:
 //var port = process.env.PORT || 8080;
-var server ="https://renovaapi.herokuapp.com";
-//var server ="http://localhost:5000";
+//var server ="https://renovaapi.herokuapp.com";
+var server ="http://localhost:5000";
 
 
 
@@ -66,12 +66,27 @@ function cargarValvoline () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".valvoline").clone().removeClass("valvoline");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
+		  	$(divCompetencia).find('.detalle').text(data[i].web);
 			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".valvolineOfertas").append(divCompetencia);
 		};
 		$("#plantilla3").remove();
+	});
+}
+
+function cargarValvolineVarios () {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasValvolineVarios", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".valvolineVarios").clone().removeClass("valvolineVarios");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+		  	$(divCompetencia).find('.detalle').text(data[i].web);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".valvolineOfertasVarios").append(divCompetencia);
+		};
+		$("#plantilla8").remove();
 	});
 }
 
@@ -132,3 +147,4 @@ cargarMotul();
 cargarTotal();
 cargarSelenia();
 cargarOfertasMensuales();
+cargarValvolineVarios();

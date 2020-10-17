@@ -11,7 +11,9 @@
 
 
 body {
-	width:100%;
+    background-image: linear-gradient(135deg, rgb(220, 220, 220) 25%, transparent 25%, transparent 50%, rgb(220, 220, 220) 50%,rgb(220, 220, 220) 75%, transparent 75%, transparent); 
+    background-size: 5px 5px;
+    width:100%;
 	text-align: center;
 	margin:0px;
     padding:0px;    
@@ -20,7 +22,6 @@ body {
 
 .cabecera{
     background-color: #000000;
-    background-image: linear-gradient( 135deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent);
     background-size: 10px 10px;
 
 	height:15rem;
@@ -97,26 +98,52 @@ body {
 }
 
 .precio{
-  text-align: right;
+  text-align: center;
+  font:2rem;
+  text-shadow: 1px 1px #38383882;
   font-size:4em;  
-  color:orangered;
+  color: rgb(240, 146, 24);
   padding-top:0.25em;
   padding-bottom: 0.5em;
   padding-right: 0.5em;
 }
 
+
+
 .detalle{
    color:black;
-   font-size:1.3rem;
-   height:5em;  
+   font-size:1.5rem;
+   height:2em;  
    text-align:center;
    letter-spacing: 0.1rem;
 }
+ #descripcionKit{
+    height:2em;
+    font-size: 1.2rem;    
+}
+/* #descripcionValvolineVarios{
+    height:2rem ;  
+    font-size:1.5rem;   
+}
+#descripcionValvoline{
+    height:2rem ;  
+    font-size:1.5rem;   
+}
+#descripcionValvoline{
+    height:2rem ;  
+    font-size:1.5rem;   
+}
+#descripcionFiltros{
+    height:2rem ;  
+    font-size:1.5rem; 
+}  */
 
-
-
-.imagenOferta, .imagenKit{
+.imagenOferta {
     height:30vh;
+}
+
+.imagenKit {
+    height:20vh;
 }
 
 .rectanguloOferta{
@@ -135,13 +162,31 @@ body {
     justify-content: left;;
 }
 
-#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla{
+#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla, #plantilla8{
   padding:1px;
 
 }
+/* 
+@media only screen and (min-width: 730px) {
+    #contenedorPromo{
+    display:none;
+    }
+} */
 
+#contenedorPromo{
+    padding: 0px 15x;
+    color:rgb(255, 255, 255);
+    display:flex;
+    justify-content:center; align-content: center; justify-items: center; align-items: center;
+    background-color:   orange;
+    -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 2px #020202;
+}
 /*/////////////////////////RESPONSIVE//*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 730px) {
     section .container-fluid{
     padding:0px;
     margin:0px;
@@ -159,7 +204,7 @@ body {
     .precio{
         font-size:1.5rem;  
         text-align:center;
-        padding-right: 0
+
 
     }
     #irALista >h1{
@@ -185,7 +230,17 @@ body {
     }
 
     .detalle{
-        font-size:0.8rem;
+            color:black;
+            font-size:0.9rem;
+            height:2em;  
+            text-align:center;
+            letter-spacing: 0rem;
+         
+    }
+    #descripcionKit{
+        height:2em;
+        font-size: 0.9rem; 
+        letter-spacing: 0px;   
     }
     .titulo{
         font-size:1rem;
@@ -197,7 +252,26 @@ body {
         margin:0;
        
     }
+     #promoDelMes{
+        font-size:1.5rem ;
+        margin:0px;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
   
+    #contenedorPromo{
+        padding: 0px 15x;
+        color:rgb(255, 255, 255);
+        display:flex;
+        justify-content:center; align-content: center; justify-items: center; align-items: center;
+        background-color:   orange;
+        -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        margin-bottom: 20px; 
+        text-shadow: 1px 1px 2px #020202;
+    }
+
   }
 
 
@@ -205,4 +279,10 @@ body {
     transition: .5s;
   transform: scale(1.1);
   z-index:10;
+}
+
+
+.competencias {
+    margin-bottom: 0px auto !important;
+
 }

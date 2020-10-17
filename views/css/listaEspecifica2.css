@@ -111,17 +111,18 @@ td, th{
 		display:none;
     }
     
-    tr > td > div >  div:first-child{
+    tr > td > div >  div:first-child >span{
         font-weight: bold;
+        color: white;
+        background-color:rgb(98, 98, 98);
         font-size: 1.8rem;
-        text-decoration: underline ;
     }
      tr > td > div >  div:nth-child(5){
         font-weight: bold;
         font-style: italic;
     } 
     tr > td > div >  div:nth-child(2){
-        font-size: 1rem;
+        font-size: 1.3rem;
     } 
     
   }
@@ -137,7 +138,7 @@ td, th{
 
 
 .search-input{
-    background-color:rgba(233, 175, 17, 0.796) !important;
+    background-color:rgba(247, 245, 245, 0.796) !important;
     border:4px rgb(240, 146, 24) solid !important;
 
 }
@@ -148,3 +149,11 @@ td, th{
     background-color: black;
     z-index:10 !important;
   }
+
+.fixed-table-header{
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    background-color: black;
+    z-index:10 !important;
+}
