@@ -11,7 +11,9 @@
 
 
 body {
-	width:100%;
+    background-image: linear-gradient(135deg, rgb(220, 220, 220) 25%, transparent 25%, transparent 50%, rgb(220, 220, 220) 50%,rgb(220, 220, 220) 75%, transparent 75%, transparent); 
+    background-size: 5px 5px;
+    width:100%;
 	text-align: center;
 	margin:0px;
     padding:0px;    
@@ -110,23 +112,31 @@ body {
 
 .detalle{
    color:black;
-   font-size:1.3rem;
-   height:5em;  
+   font-size:1.5rem;
+   height:2em;  
    text-align:center;
    letter-spacing: 0.1rem;
 }
-#descripcionKit{
-    height:2em ;     
+ #descripcionKit{
+    height:2em;
+    font-size: 1.2rem;    
 }
-#descripcionValvolineVarios{
-    height:1rem ;  
-    font-size:1rem;   
+/* #descripcionValvolineVarios{
+    height:2rem ;  
+    font-size:1.5rem;   
 }
 #descripcionValvoline{
-    height:1rem ;  
-    font-size:1rem;   
+    height:2rem ;  
+    font-size:1.5rem;   
 }
-
+#descripcionValvoline{
+    height:2rem ;  
+    font-size:1.5rem;   
+}
+#descripcionFiltros{
+    height:2rem ;  
+    font-size:1.5rem; 
+}  */
 
 .imagenOferta {
     height:30vh;
@@ -156,21 +166,27 @@ body {
   padding:1px;
 
 }
+/* 
+@media only screen and (min-width: 730px) {
+    #contenedorPromo{
+    display:none;
+    }
+} */
 
-
-#promoDelMes{
-    height:10rem;
-    border:1px black solid;
-    font-style: italic;
-    background-size: 5px 5px;
-    margin:0 8rem;
-    color:rgb(0, 0, 0);
-    font-size:2.5rem;
-    text-align:center;
-    padding-top:0rem;
+#contenedorPromo{
+    padding: 0px 15x;
+    color:rgb(255, 255, 255);
+    display:flex;
+    justify-content:center; align-content: center; justify-items: center; align-items: center;
+    background-color:   orange;
+    -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 2px #020202;
 }
 /*/////////////////////////RESPONSIVE//*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 730px) {
     section .container-fluid{
     padding:0px;
     margin:0px;
@@ -188,7 +204,7 @@ body {
     .precio{
         font-size:1.5rem;  
         text-align:center;
-        padding-right: 0
+
 
     }
     #irALista >h1{
@@ -214,7 +230,17 @@ body {
     }
 
     .detalle{
-        font-size:0.8rem;
+            color:black;
+            font-size:0.9rem;
+            height:2em;  
+            text-align:center;
+            letter-spacing: 0rem;
+         
+    }
+    #descripcionKit{
+        height:2em;
+        font-size: 0.9rem; 
+        letter-spacing: 0px;   
     }
     .titulo{
         font-size:1rem;
@@ -233,7 +259,18 @@ body {
         padding-bottom:1rem;
     }
   
-
+    #contenedorPromo{
+        padding: 0px 15x;
+        color:rgb(255, 255, 255);
+        display:flex;
+        justify-content:center; align-content: center; justify-items: center; align-items: center;
+        background-color:   orange;
+        -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
+        margin-bottom: 20px; 
+        text-shadow: 1px 1px 2px #020202;
+    }
 
   }
 
