@@ -139,6 +139,40 @@ function cargarSelenia() {
 }
 
 
+var z=0;
+
+$(document).ready(function(){
+	$("#imagenPromo").click(function(){
+		z=z+1;
+		if (z%2!=0){
+			var elemento =document.getElementById("imagenPromo");
+			elemento.style.transform = "scale(5)";
+			elemento.style.transition ="0s"
+			$("#imagenPromo").css("cursor","zoom-out");
+			elemento.style.margin="auto";
+			elemento.style.position="absolute";		
+			elemento.style.right="0";
+			elemento.style.left="0";
+			elemento.style.zIndex="50";
+			$("#titulo").css("z-index","0");
+		}
+		if (z%2==0){
+			var elemento =document.getElementById("imagenPromo");
+			if (window.matchMedia("(max-width: 730px)").matches) {
+				elemento.style.transform = "scale(1.3)";
+			} else {
+				elemento.style.transform = "scale(2)"
+			}
+			$("#imagenPromo").css("cursor","zoom-in");
+			elemento.style.position="relative";	
+			$("#titulo").css("z-index","0");
+			
+		}
+
+	});
+  });
+
+
 
 cargarOfertasFram();
 cargarKits(); 
