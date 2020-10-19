@@ -227,7 +227,7 @@ body {
     justify-content:space-between; align-content: center; justify-items: space-around; align-items: center;
 }
 #footer > h1{
-    margin-left:2rem;
+    margin-left:5rem;
     font-size:3rem;
     width:100%;
 }
@@ -337,6 +337,7 @@ body {
     #footer > h1{
         font-size:1.2rem;
         width:60%;
+        margin-left:2rem;
     }
     #imagenPromo{
         height:10rem;
