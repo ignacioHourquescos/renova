@@ -66,8 +66,10 @@ function cargarValvoline () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".valvoline").clone().removeClass("valvoline");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].web);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			  $(divCompetencia).find('.detalle').text(data[i].web);
+			  if(data[i].id.substring(0,2)=="01") {
+				  $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			  }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".valvolineOfertas").append(divCompetencia);
 		};
@@ -113,7 +115,7 @@ function cargarTotal() {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".total").clone().removeClass("total");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
+			  $(divCompetencia).find('.detalle').text(data[i].d);
 			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".totalOfertas").append(divCompetencia);
