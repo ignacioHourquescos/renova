@@ -50,8 +50,7 @@ body {
 } 
 
 /*///////////////////////////////TITULO Y SIBTITULO*/
-
-.container-fluid #titulo{
+ #titulo{
    background-color:black;
     color:rgb(255, 255, 255);
     font-family: "librebaskerville-bold", serif;
@@ -63,10 +62,17 @@ body {
     padding-bottom:2rem;
     text-shadow: 4px 4px 8px rgb(12, 12, 12);
     transform: skewY(-2deg) translateY(+2rem);
-    z-index:1;
-
-   
+    z-index:0;
 }
+
+#titulo > h1{
+    font-size:8vmin;
+    color:rgb(255, 255, 255);
+    font-family: "librebaskerville-bold", serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 .container-fluid #subtitulo{
     /* background-image: linear-gradient( 45deg, orange 25%, transparent 25%, transparent 50%, orange 50%,orange 75%, transparent 75%, transparent); */
     background-color: orange;
@@ -77,6 +83,7 @@ body {
     font-size:2.5rem;
     text-align:right;
     padding-top:2rem;
+    z-index:-1;
 }
 
 
@@ -84,6 +91,31 @@ body {
     margin-bottom:5rem;
 }
 
+
+#footer{
+    background-color:black;
+    display:flex;
+    color:rgb(255, 255, 255);
+    font-family: "librebaskerville-bold", serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding:2rem;
+    margin:auto;
+    margin-bottom:7rem;
+    font-size:2rem;
+    text-shadow: 4px 4px 8px rgb(12, 12, 12);
+    transform: skewY(-2deg) translateY(+2rem);
+    z-index:10;
+    box-shadow: 5px 10px orange;
+    position: relative;
+    right: 0px;
+    left: 0px;
+ }
+
+
+ /* #compraMinima{
+     font-size:1rem;
+ } */
 
 /*///////////////////////////////KITS y OFERTAS */
 .titulo{
@@ -93,8 +125,6 @@ body {
     color:whitesmoke;
     font-size: 1.5rem;
     letter-spacing: 0px;
-
-
 }
 
 .precio{
@@ -162,7 +192,7 @@ body {
     justify-content: left;;
 }
 
-#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla, #plantilla8{
+#plantilla7, #plantilla1, #plantilla2, #plantilla3, #plantilla4, #plantilla5, #plantilla6, #plantilla, #plantilla8, #plantilla9{
   padding:1px;
 
 }
@@ -173,18 +203,35 @@ body {
     }
 } */
 
-#contenedorPromo{
-    padding: 0px 15x;
-    color:rgb(255, 255, 255);
-    display:flex;
-    justify-content:center; align-content: center; justify-items: center; align-items: center;
-    background-color:   orange;
-    -webkit-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
-    margin-bottom: 20px; 
-    text-shadow: 1px 1px 2px #020202;
+
+
+#imagenPromo{
+    height:10rem;
+    transform: scale(2);
+    border: 5px rgb(0, 0, 0) solid;
+    position: relative;
+    cursor:zoom-in;
 }
+
+
+@media only screen and (max-width: 730px) {
+    #imagenPromo{
+        height:6rem;
+        border: 0.3rem black solid;;
+    }
+}
+
+
+#footer{
+    display:flex;
+    justify-content:space-between; align-content: center; justify-items: space-around; align-items: center;
+}
+#footer > h1{
+    margin-left:5rem;
+    font-size:3rem;
+    width:100%;
+}
+
 /*/////////////////////////RESPONSIVE//*/
 @media only screen and (max-width: 730px) {
     section .container-fluid{
@@ -260,7 +307,7 @@ body {
     }
   
     #contenedorPromo{
-        padding: 0px 15x;
+        /* padding: 0px 15x;
         color:rgb(255, 255, 255);
         display:flex;
         justify-content:center; align-content: center; justify-items: center; align-items: center;
@@ -269,9 +316,56 @@ body {
         -moz-box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
         box-shadow: 6px 6px 7px -2px rgba(161,161,161,0.57);
         margin-bottom: 20px; 
-        text-shadow: 1px 1px 2px #020202;
+        text-shadow: 1px 1px 2px #020202; */
     }
+    .competencias {
+		display:flex;
+		flex-direction:row;
+		max-width: 970px;
+		margin: 0%;
+		display: flex;
+		justify-content: center;
+	}
 
+    #titulo > h1{
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+        margin: 0;
+    
+    }
+    #footer > h1{
+        font-size:1.2rem;
+        width:60%;
+        margin-left:2rem;
+        margin-right:1rem;
+    }
+    #imagenPromo{
+        height:10rem;
+        transform: scale(1.3);
+        border: 5px rgb(0, 0, 0) solid;
+        cursor: zoom-in;
+    }
+    #footer{
+        background-color:black;
+        display:flex;
+        color:rgb(255, 255, 255);
+        font-family: "librebaskerville-bold", serif;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding:0rem;
+        font-size:2rem;
+        padding-left:2rem;
+        margin:0;
+        text-shadow: 4px 4px 8px rgb(12, 12, 12);
+        transform: skewY(-2deg) translateY(+2rem);
+        z-index:10;
+        box-shadow: 5px 10px orange;
+        margin-bottom:7rem;
+     }
+     #agrandarImagen{
+         font-size:1.2rem !important;
+     }
   }
 
 
