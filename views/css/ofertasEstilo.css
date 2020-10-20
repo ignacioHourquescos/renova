@@ -227,7 +227,7 @@ body {
     justify-content:space-between; align-content: center; justify-items: space-around; align-items: center;
 }
 #footer > h1{
-    margin-left:5rem;
+    margin-left:5.5rem;
     font-size:3rem;
     width:100%;
 }
@@ -366,6 +366,15 @@ body {
      #agrandarImagen{
          font-size:1.2rem !important;
      }
+     #gancho{
+         font-size: 1.5rem;
+         padding-left:0.5rem;
+     }
+     #recompensa{
+        font-size: 1.5rem;
+        padding-right:0.5rem;
+    }
+     
   }
 
 
