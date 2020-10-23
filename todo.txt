@@ -1,6 +1,5 @@
 TODO JUEVES
-- aumentar pelado y trico
-- hacer lista reventa valvoline2
+- aumentar pelado 
 - sacar ruedita
 - cambiar formato de index de listas2
 - arreglar tema de adwords
