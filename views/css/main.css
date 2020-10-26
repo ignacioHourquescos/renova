@@ -77,11 +77,11 @@ body {
  * ------------------------------------------------------------------- */
 a, a:visited {
   color: #07617d;
-  -moz-transition: all 0.3s ease-in-out;
+  /* -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 a:hover, a:focus {
@@ -731,11 +731,11 @@ input[type="button"] {
   text-align: center;
   white-space: nowrap;
   border: none;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  /* -moz-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -ms-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out; */
 }
 
 @media (min-width: 500px) {
