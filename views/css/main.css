@@ -1978,6 +1978,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   position: relative;
   padding: 15rem 0 15rem;
   color: rgba(255, 255, 255, 0.3);
+  z-index:100;
 }
 #services .overlay {
   position: absolute;
@@ -2011,14 +2012,17 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #services .services-content {
   text-align: center;
   max-width: 1040px;
+  z-index:100;
 }
 #services .services-list {
   margin-top: 1.2rem;
   text-align: center;
+  z-index:100;
 }
 #services .services-list .service-item {
   margin-bottom: 3rem;
   padding: 0 50px;
+  z-index:100;
 }
 #services .services-list .service-item p {
   color: rgba(255, 255, 255);
@@ -2026,16 +2030,19 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #services .services-list .icon {
   display: inline-block;
   margin-bottom: 1.5rem;
+  z-index:100;
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
   color: #f9a828;
+  z-index:100;
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
   line-height: 1.765;
   color: #FFFFFF;
   margin-bottom: 3rem;
+  z-index:100;
 }
 
 /* ------------------------------------------------------------------- 
