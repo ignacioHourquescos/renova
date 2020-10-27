@@ -112,13 +112,8 @@ function sacarDescuetnoTamboresyBaldes2(id,data,precioConIva){
 
 //FUNCION CONVERTIR STOCK NUMERICO EN ALFABETICO
 function convertirStockNumericoEnEscala(elemento){
-<<<<<<< HEAD
 	if (elemento>15){
 		return "DISPONIBLE"
-=======
-	if (elemento>20){
-		return "Disponible"
->>>>>>> listas
 	} 	
 	else	
 		return "Consultar"
