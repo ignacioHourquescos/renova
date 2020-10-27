@@ -61,6 +61,11 @@ body {
 	text-align: center;
 }
 
+.mes{
+	text-decoration: underline;
+	color:white;
+}
+
 .titulo{
 	padding:0px;
 	margin:0px;

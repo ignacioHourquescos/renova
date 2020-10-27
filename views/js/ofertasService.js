@@ -66,12 +66,29 @@ function cargarValvoline () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".valvoline").clone().removeClass("valvoline");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			  $(divCompetencia).find('.detalle').text(data[i].web);
+			  if(data[i].id.substring(0,2)=="01") {
+				  $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			  }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".valvolineOfertas").append(divCompetencia);
 		};
 		$("#plantilla3").remove();
+	});
+}
+
+function cargarValvolineVarios () {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasValvolineVarios", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".valvolineVarios").clone().removeClass("valvolineVarios");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+		  	$(divCompetencia).find('.detalle').text(data[i].web);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".valvolineOfertasVarios").append(divCompetencia);
+		};
+		$("#plantilla8").remove();
 	});
 }
 
@@ -98,7 +115,7 @@ function cargarTotal() {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".total").clone().removeClass("total");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
+			  $(divCompetencia).find('.detalle').text(data[i].d);
 			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".totalOfertas").append(divCompetencia);
@@ -124,6 +141,69 @@ function cargarSelenia() {
 }
 
 
+function cargarOfertasVarias() {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasVarias", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".ofertaVarias").clone().removeClass("ofertaVarias");
+    	  	$(divCompetencia).find('.titulo').text(data[i].web);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".ofertasVarias").append(divCompetencia);
+		};
+		$("#plantilla9").remove();
+	});
+}
+
+function cargarVinto() {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasVinto", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".ofertaVinto").clone().removeClass("ofertaVinto");
+    	  	$(divCompetencia).find('.titulo').text(data[i].web);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".ofertasVinto").append(divCompetencia);
+		};
+		$("#plantilla10").remove();
+	});
+}
+
+
+var z=0;
+
+$(document).ready(function(){
+	$("#imagenPromo").click(function(){
+		z=z+1;
+		if (z%2!=0){
+			var elemento =document.getElementById("imagenPromo");
+			elemento.style.transform = "scale(5)";
+			elemento.style.transition ="0s"
+			$("#imagenPromo").css("cursor","zoom-out");
+			elemento.style.margin="auto";
+			elemento.style.position="absolute";		
+			elemento.style.right="0";
+			elemento.style.left="0";
+			elemento.style.zIndex="50";
+			$("#titulo").css("z-index","0");
+		}
+		if (z%2==0){
+			var elemento =document.getElementById("imagenPromo");
+			if (window.matchMedia("(max-width: 730px)").matches) {
+				elemento.style.transform = "scale(1.3)";
+			} else {
+				elemento.style.transform = "scale(2)"
+			}
+			$("#imagenPromo").css("cursor","zoom-in");
+			elemento.style.position="relative";	
+			$("#titulo").css("z-index","0");
+			
+		}
+
+	});
+  });
+
+
 
 cargarOfertasFram();
 cargarKits(); 
@@ -132,3 +212,6 @@ cargarMotul();
 cargarTotal();
 cargarSelenia();
 cargarOfertasMensuales();
+cargarValvolineVarios();
+cargarOfertasVarias();
+cargarVinto();
