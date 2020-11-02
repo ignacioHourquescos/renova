@@ -33,14 +33,18 @@ function obtenerListaEspecifica (id) {
 		$('table').bootstrapTable({ 
 			data: data.resultado,
 		}); 
+		$(".spinner-border").remove();
 		document.getElementById("nombreLista").innerHTML=data.agrupacion;
 		document.getElementById("descuento").innerHTML=data.descuento;
-		$(".spinner-border").remove();
 	}));
+	
 }
 
 
 
+
+document.ready
+$(document).ready($('input').attr('placeholder', 'Buscar'));
 
 //escondo table header cuando es un celular, y si es en PC lo muestro
   if (window.matchMedia("(max-width: 400px)").matches) {
@@ -112,8 +116,8 @@ function sacarDescuetnoTamboresyBaldes2(id,data,precioConIva){
 
 //FUNCION CONVERTIR STOCK NUMERICO EN ALFABETICO
 function convertirStockNumericoEnEscala(elemento){
-	if (elemento>15){
-		return "DISPONIBLE"
+	if (elemento>20){
+		return "Disponible"
 	} 	
 	else	
 		return "Consultar"
@@ -123,6 +127,10 @@ function convertirStockNumericoEnEscala(elemento){
 obtenerListaEspecifica(id);
 
 
-$( document ).ready(function() {
-    document.getElementsByClassName("search-input").placeholder="Buscar por Codigo";
-});
+// $( document ).ready(function() {
+//     document.getElementsByClassName("search-input").placeholder="Buscar por Codigo";
+// });
+
+(function() {
+	document.getElementsByClassName("form-control search-input")[0].style.placeholder="Buscar";
+ })();
