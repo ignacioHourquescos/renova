@@ -9,7 +9,7 @@ function cargarListas () {
 		var idColor = 1;
 		for (i = 0; i < cantidad; i++) {
 			var divCompetencia = $(".competenciaPlantilla").clone().removeClass("competenciaPlantilla");
-			$(divCompetencia).find('.link').each( function(){$( this ).attr("href",$( this ).attr("href")+data[i].codigo);});
+			$(divCompetencia).find('.link2').each( function(){$( this ).attr("href",$( this ).attr("href")+data[i].codigo);});
 			$(divCompetencia).find('.titulo').text(data[i].descripcion);
 			$(divCompetencia).find('.mes').text(data[i].mes);
 			$(divCompetencia).find('.aumento').text(data[i].aumento);

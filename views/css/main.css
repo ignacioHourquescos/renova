@@ -1297,7 +1297,7 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 #header-menu-trigger {
   display: block;
-  position: fixed;
+   position: fixed; 
   right: 32px;
   top: 30px;
   height: 42px;
@@ -1313,6 +1313,7 @@ header .header-logo a {
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index:-1000;
 }
 #header-menu-trigger.opaque {
   background-color: #000000;

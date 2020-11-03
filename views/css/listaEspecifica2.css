@@ -143,8 +143,9 @@ td, th{
 
 .search-input{
     background-color:rgba(247, 245, 245, 0.796) !important;
-    border:2px rgb(102, 102, 102) solid !important;
-
+    border:2px rgb(102, 102, 102) solid !important;	-webkit-box-shadow: 0 12px 26px -14px black;
+    -moz-box-shadow: 0 12px 26px -14px black;
+         box-shadow: 0 12px 26px -14px black;
 
 }
 .fixed-table-toolbar{
@@ -161,4 +162,10 @@ td, th{
     top: 0;
     background-color: black;
     z-index:10 !important;
+}
+
+
+.info.groupBy{
+    background-color:rgb(102, 100, 100);
+    color:white;
 }
