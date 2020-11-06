@@ -43,8 +43,6 @@ function obtenerListaEspecifica (id) {
 
 
 
-document.ready
-$(document).ready($('input').attr('placeholder', 'Buscar'));
 
 //escondo table header cuando es un celular, y si es en PC lo muestro
   if (window.matchMedia("(max-width: 400px)").matches) {
@@ -131,6 +129,25 @@ obtenerListaEspecifica(id);
 //     document.getElementsByClassName("search-input").placeholder="Buscar por Codigo";
 // });
 
-(function() {
-	document.getElementsByClassName("form-control search-input")[0].style.placeholder="Buscar";
- })();
+// (function() {
+// 	document.getElementsByClassName("form-control search-input")[0].style.placeholder="Buscar";
+//  })();
+
+
+//  $(document).ready(function () {
+// 	$('#myTable').DataTable({"order": [[ 0, "asc" ]]});
+// 	$('#nombreLista').attr('color', 'red');
+// 	$('.dataTables_length').addClass('bs-select');
+// 	$('input').attr('placeholder', 'Buscar');
+// 	console.log("hola");
+// });
+
+$( document ).ready(function() {
+	console.log( "ready!" );
+	console.log("hola");
+	$('#nombreLista').attr('style', 'color:red');
+	$('#myTable').DataTable({"order": [[ 1, "asc" ]]});
+	$('.dataTables_length').addClass('bs-select');
+	$('input').attr('placeholder', 'Buscar');
+	
+});

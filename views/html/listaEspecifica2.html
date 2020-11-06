@@ -8,6 +8,8 @@
 		<title>Lista Especifica</title>
 		<script src="../js/src/jquery.js"></script>
 		<script src="../js/src/helpers.js"></script>
+
+		
 		  <!-- sticky header          --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
   <!-- sticky header          --><link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet">
@@ -29,7 +31,8 @@
   <!-- print pantalla         --><script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/print/bootstrap-table-print.min.js"></script>
   <!-- loading template       --><link href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css" rel="stylesheet">
   <!-- group by column        --><script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script> 
-		<link rel="stylesheet" href="../css/micons/micons.css">
+		
+  <link rel="stylesheet" href="../css/micons/micons.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
     	<link rel="stylesheet" type="text/css" href="../css/main.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -65,13 +68,13 @@
 		<ul class="nav-list">
 			<li><a class="" href="../../index.html" 		title="">Home</a></li>
 			<li><a class="" href="listas.html"				title="">Listas</a></li>
-			<li><a class="" href="login.html" 			title="">Ofertas</a></li>
+			<li><a class="" href="login.html" 				title="">Ofertas</a></li>
 			<li><a class="" href="faq.html" 				title="">Abrir un lubricentro</a></li>				
 		</ul>		
 	 </nav> 
 
 </header> 
-
+<!--  -->
 
 
 <!-- SECCION DE OFERTAS
@@ -102,19 +105,17 @@
 							data-toolbar-align="left"
 							data-show-header="false"
 							data-group-by="true"
-							data-group-by-field="r"
-			
-					
-						
+							data-group-by-field="r"	
+										
 							>
 							<thead class="thead-dark" > 
 							  <tr> 	
-								<th data-field="id"data-width="10" data-width-unit="%" ><pan>Articulo</span>  								</span style="text-align: center;"></th> 
-								<th data-field="d" >  													Descripcion			</span style="text-align: left;"> </th> 
+								<th data-field="id" data-sortable="true"data-width="10" data-width-unit="%" ><span>	Articulo</span>  								</span style="text-align: center;"></th> 
+								<th data-field="d" 	data-sortable="true">  											Descripcion</span style="text-align: left;"> </th> 
 								<!-- <th data-field="r" data-width="20" data-width-unit="%"data-card-visible="false">  		Rubro				</span> </th>  -->
-								<th data-field="pf" data-width="90" data-align="center">  								UNITARIO	 		</th>  
-								<th data-field="p" data-width="90" data-align="center">  								CAJA CERRADA		</th>  
-								<th data-field="s" data-width="90" class="text-right" >     							Stock 				</span> </th> 
+								<th data-field="pf" data-width="90" data-align="center">  		UNITARIO	 		</th>  
+								<th data-field="p" data-width="90" data-align="center">  		CAJA CERRADA		</th>  
+								<th data-field="s" data-width="90" class="text-right" >     	Stock 				</span> </th> 
 							  </tr> 
 						</thead> 
 					</table> 		  
@@ -135,6 +136,5 @@
 
 <script src="../js/src/plugins.js"></script>
 <script src="../js/src/main.js"></script>
-
 <script src="../js/listaEspecificaService.js"></script>
 </html>
