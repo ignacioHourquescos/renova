@@ -131,12 +131,15 @@ function cargarSelenia() {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".selenia").clone().removeClass("selenia");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
-			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+			  $(divCompetencia).find('.detalle').text(data[i].web);
+			  if(data[i].id.substring(0,5)=="BALDE" || data[i].id.substring(0,5)=="TAMBO" ) {
+				  $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			  }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
+			  $(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".seleniaOfertas").append(divCompetencia);
 		};
 		$("#plantilla6").remove();
+
 	});
 }
 

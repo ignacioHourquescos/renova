@@ -1,5 +1,5 @@
-//var server ="https://renovaapi.herokuapp.com";
-var server ="http://localhost:5000";
+var server ="https://renovaapi.herokuapp.com";
+//var server ="http://localhost:5000";
 var ventasFiltros=[];
 
 function ventasPorAgrupacion(id,mes,codigo) {  
@@ -25,7 +25,7 @@ var agrupaciones = {
   Valvoline:3,
   Total:5,
   Motul:12,
-  Petronas:136,
+  Petronas:316,
   Trico:13,
   WagnerLockheed:11,
   Locx:14
@@ -53,19 +53,19 @@ var anio =[
 const pedido = new Promise((resolve,reject)=>{if(true){resolve ("todo muy lindo");var array=[];}else{reject("todo feo");}});
 var array=[];
 pedido
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[0].mes, anio[0].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[1].mes, anio[1].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[2].mes, anio[2].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[3].mes, anio[3].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[4].mes, anio[4].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[5].mes, anio[5].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[6].mes, anio[6].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[7].mes, anio[7].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[8].mes, anio[8].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[9].mes, anio[9].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[10].mes,anio[10].codigo ));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[11].mes,anio[11].codigo ));})
-   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Fram, anio[12].mes,anio[12].codigo ));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[0].mes, anio[0].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[1].mes, anio[1].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[2].mes, anio[2].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[3].mes, anio[3].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[4].mes, anio[4].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[5].mes, anio[5].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[6].mes, anio[6].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[7].mes, anio[7].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[8].mes, anio[8].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[9].mes, anio[9].codigo));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[10].mes,anio[10].codigo ));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[11].mes,anio[11].codigo ));})
+  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[12].mes,anio[12].codigo ));})
   .then(()  =>{console.log(ventasFiltros);})
   .then(()  =>{setTimeout(()=>{    
     array=ventasFiltros.slice(1);
@@ -150,8 +150,116 @@ pedido
       var chart = new ApexCharts(document.querySelector("#chart"), options);
       chart.render();
       }
-    renderizarGrafico();console.log("llegamso hasta aca");},2000)
+    renderizarGrafico();console.log("llegamso hasta aca");},3000)
   })
+
+
+
+// const pedido2 = new Promise((resolve,reject)=>{if(true){resolve ("todo muy lindo");var array=[];}else{reject("todo feo");}});
+// var array=[];
+// pedido2
+//   .then(()  =>{ventasFiltros=[]})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[0].mes, anio[0].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[1].mes, anio[1].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[2].mes, anio[2].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[3].mes, anio[3].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[4].mes, anio[4].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[5].mes, anio[5].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[6].mes, anio[6].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[7].mes, anio[7].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[8].mes, anio[8].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[9].mes, anio[9].codigo));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[10].mes,anio[10].codigo ));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[11].mes,anio[11].codigo ));})
+//   .then(()  =>{(ventasPorAgrupacion(agrupaciones.Valvoline, anio[12].mes,anio[12].codigo ));})
+//   .then(()  =>{console.log(ventasFiltros);})
+//   .then(()  =>{setTimeout(()=>{    
+//     array=ventasFiltros.slice(1);
+//     function renderizarGrafico(){
+//       var options = {
+//         series: [{
+//         name: 'Filtros Fram',
+//         data: array
+//       }],
+//         chart: {
+//         height: 350,
+//         type: 'bar',
+//       },
+//       plotOptions: {
+//         bar: {
+//           dataLabels: {
+//             position: 'top', // top, center, bottom
+//           },
+//         }
+//       },
+//       dataLabels: {
+//         enabled: true,
+      
+//         offsetY: -20,
+//         style: {
+//           fontSize: '12px',
+//           colors: ["#304758"]
+//         }
+//       },
+      
+//       xaxis: {
+//         categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+//         position: 'top',
+//         axisBorder: {
+//           show: false
+//         },
+//         axisTicks: {
+//           show: false
+//         },
+//         crosshairs: {
+//           fill: {
+//             type: 'gradient',
+//             gradient: {
+//               colorFrom: '#D8E3F0',
+//               colorTo: '#BED1E6',
+//               stops: [0, 100],
+//               opacityFrom: 0.4,
+//               opacityTo: 0.5,
+//             }
+//           }
+//         },
+//         tooltip: {
+//           enabled: true,
+//         }
+//       },
+//       yaxis: {
+//         axisBorder: {
+//           show: false
+//         },
+//         axisTicks: {
+//           show: false,
+//         },
+//         labels: {
+//           show: false,
+//           formatter: function (val) {
+//             return val;
+//           }
+//         }
+      
+//       },
+//       title: {
+//         text: 'Fram',
+//         floating: true,
+//         offsetY: 330,
+//         align: 'center',
+//         style: {
+//           color: '#444'
+//         }
+//       }
+//       };
+      
+//       var chart = new ApexCharts(document.querySelector("#valvo"), options);
+//       chart.render();
+//       }
+//     renderizarGrafico();console.log("llegamso hasta aca");},3000)
+//   })
+
+
 
 
 
