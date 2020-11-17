@@ -47,29 +47,44 @@ var anio =[
 ]
 
 
-
+$(document).ready(function() {
+  $("#dropdown").on("option", "click", function() {
+    alert("Haha");
+  });
+});
 // calse coderhouse toto
 
-const pedido = new Promise((resolve,reject)=>{if(true){resolve ("todo muy lindo");var array=[];}else{reject("todo feo");}});
+const pedido = new Promise((resolve,reject)=>{
+  if(true){
+    resolve ("todo muy lindo");
+  }
+  else{
+    reject("todo feo");}
+  }
+);
+
 var array=[];
+var selected =document.getElementById("dropdown").value;
+
+
 pedido
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[0].mes, anio[0].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[1].mes, anio[1].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[2].mes, anio[2].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[3].mes, anio[3].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[4].mes, anio[4].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[5].mes, anio[5].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[6].mes, anio[6].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[7].mes, anio[7].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[8].mes, anio[8].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[9].mes, anio[9].codigo));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[10].mes,anio[10].codigo ));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[11].mes,anio[11].codigo ));})
-  .then(()  =>{(ventasPorAgrupacion(agrupaciones.Petronas, anio[12].mes,anio[12].codigo ));})
-  .then(()  =>{console.log(ventasFiltros);})
-  .then(()  =>{setTimeout(()=>{    
-    array=ventasFiltros.slice(1);
-    function renderizarGrafico(){
+.then(()  =>{console.log(selected);(ventasPorAgrupacion(selected, anio[0].mes, anio[0].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[1].mes, anio[1].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[2].mes, anio[2].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[3].mes, anio[3].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[4].mes, anio[4].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[5].mes, anio[5].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[6].mes, anio[6].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[7].mes, anio[7].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[8].mes, anio[8].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[9].mes, anio[9].codigo));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[10].mes,anio[10].codigo ));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[11].mes,anio[11].codigo ));})
+.then(()  =>{(ventasPorAgrupacion(selected, anio[12].mes,anio[12].codigo ));})
+.then(()  =>{console.log(ventasFiltros);})
+.then(()  =>{setTimeout(()=>{    
+  array=ventasFiltros.slice(1);
+  function renderizarGrafico(){
       var options = {
         series: [{
         name: 'Filtros Fram',
@@ -149,12 +164,16 @@ pedido
       
       var chart = new ApexCharts(document.querySelector("#chart"), options);
       chart.render();
-      }
-    renderizarGrafico();console.log("llegamso hasta aca");},3000)
-  })
+    }
+  renderizarGrafico();console.log("llegamso hasta aca");},4000)
+})
 
 
 
+
+
+
+  
 // const pedido2 = new Promise((resolve,reject)=>{if(true){resolve ("todo muy lindo");var array=[];}else{reject("todo feo");}});
 // var array=[];
 // pedido2
