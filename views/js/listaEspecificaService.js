@@ -149,5 +149,4 @@ $( document ).ready(function() {
 	$('#myTable').DataTable({"order": [[ 1, "asc" ]]});
 	$('.dataTables_length').addClass('bs-select');
 	$('input').attr('placeholder', 'Buscar');
-	
 });
