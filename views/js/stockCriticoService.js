@@ -7,7 +7,8 @@ function obtenerListaArticulosBajoStock () {
 	$(document).ready($.getJSON(server+"/stock", function (data) {
 		console.log(data);
 		for(i=0; i<data.length;i++){
-			let unidadesVendidasPorMes= data[i].unidades*1.3;
+			let unidadesVendidasPorMes= (data[i].unidades*1.3).toFixed(0);
+			data[i].unidades=unidadesVendidasPorMes;
 			console.log(unidadesVendidasPorMes);
 			if (data[i].cant_stock==0){
 				data[i].cant_stock=0;
