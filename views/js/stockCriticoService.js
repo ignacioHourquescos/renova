@@ -2,6 +2,40 @@
 var server ="https://renovaapi.herokuapp.com";
 //var server ="http://localhost:5000";
 
+// var mm = String((new Date()).getMonth() + 1).padStart(2, '0');
+// var yyyy = (new Date()).getFullYear();
+
+// var array=[];
+
+// //FUNCION QUE CARGA ADENTRO DEL ARRAY LAS VENTAS MENUALES PROMEDIO (TOMA EL DIA DE HOY Y DIVIDE LAS UNNIDADES VENDIDAS POR LA CANTIDAD DE MESES)
+// function ventasMensuales(yyyy,mm) {  
+//     $(document).ready($.getJSON(server+"/ventasGenerales?fechaDesde="+yyyy+"0101&fechaHasta="+yyyy+mm+"29", function (data) {  
+// 		for (var i=0; i<data.length; i++) {
+// 			array.push({"codigo": data[i].cod_articulo, "desc":data[i].descrip_arti, "UM":data[i].um,"cantidad": data[i].canti/mm, "stock":0});
+// 			//Llamo a funcion que pushe a adentro del array el stock actual
+// 			//StockActual(data[i].cod_articulo.valueOf());
+// 			array[i].stock=stockActual(data[i].cod_articulo.valueOf());	
+// 		}
+
+// 	}));  
+// 	console.log(array);  
+	
+// }
+
+
+// //funcion llamada en ventas mensuales. pushea el stock disponible
+// function stockActual(codigo){
+// 	$(document).ready($.getJSON(server+"/obtenerStockArticulo?id='"+codigo+"'", function(data){
+// 		return(data[0].s);
+// 	}
+// 	));
+// }
+
+
+// ventasMensuales(yyyy,mm);
+
+
+
 
 function obtenerListaArticulosBajoStock () {
 	$(document).ready($.getJSON(server+"/stock", function (data) {
@@ -33,6 +67,7 @@ function obtenerListaArticulosBajoStock () {
 	}));
 }
 
+<<<<<<< HEAD
 obtenerListaArticulosBajoStock();
 
 
@@ -49,3 +84,6 @@ obtenerListaArticulosBajoStock();
 function filtrarcodigos(cantidad){
 	return((cantidad.stockCritico > 0 && cantidad.stockCritico > 0.5) || cantidad.cant_stock<0);
 }
+=======
+obtenerListaArticulosBajoStock()
+>>>>>>> 98067ef05d8c67c986b5d1006afe906189ac79db
