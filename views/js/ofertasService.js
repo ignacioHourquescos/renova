@@ -162,11 +162,13 @@ function cargarVinto() {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertasVinto", function (data) {
 		for (i = 0; i < data.length; i++) {
-			var divCompetencia = $(".ofertaVinto").clone().removeClass("ofertaVinto");
-    	  	$(divCompetencia).find('.titulo').text(data[i].web);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
-			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
-    	  	$(".ofertasVinto").append(divCompetencia);
+            if(data[i].c >10){
+			    var divCompetencia = $(".ofertaVinto").clone().removeClass("ofertaVinto");
+    	  	    $(divCompetencia).find('.titulo').text(data[i].web);
+			    $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+			    $(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	    $(".ofertasVinto").append(divCompetencia);
+            }
 		};
 		$("#plantilla10").remove();
 	});
