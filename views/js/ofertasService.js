@@ -162,7 +162,7 @@ function cargarVinto() {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertasVinto", function (data) {
 		for (i = 0; i < data.length; i++) {
-            if(data[i].c >10){
+            if(data[i].stock >10){
 			    var divCompetencia = $(".ofertaVinto").clone().removeClass("ofertaVinto");
     	  	    $(divCompetencia).find('.titulo').text(data[i].web);
 			    $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
