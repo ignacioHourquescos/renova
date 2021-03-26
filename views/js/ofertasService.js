@@ -143,6 +143,21 @@ function cargarSelenia() {
 	});
 }
 
+function cargarRemateMercaderia() {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/remateMercaderia", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".remateMercaderia").clone().removeClass("remateMercaderia");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+			    $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.70).toFixed(0));
+			  $(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".rematesMercaderia").append(divCompetencia);
+		};
+		$("#plantilla13").remove();
+
+	});
+}
+
 
 function cargarOfertasVarias() {
 	//busca en el backend todas las ofertas
@@ -222,3 +237,4 @@ cargarOfertasMensuales();
 cargarValvolineVarios();
 cargarOfertasVarias();
 cargarVinto();
+cargarRemateMercaderia();
