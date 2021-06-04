@@ -113,9 +113,12 @@ body {
  }
 
 
- /* #compraMinima{
+  #compraMinima{
      font-size:1rem;
- } */
+     color:orange !important;
+     text-shadow: 2px 2px rgb(66, 62, 62); 
+     font-size:3rem !important;
+ } 
 
 /*///////////////////////////////KITS y OFERTAS */
 .titulo{
@@ -327,9 +330,9 @@ body {
 		justify-content: center;
 	}
 
-    #titulo > h1{
+    #compraMinima{
         padding-top: 0.5rem;
-        font-size: 2rem;
+        font-size: 2rem !important;
         padding-bottom: 0.5rem;
         margin: 0;
     
