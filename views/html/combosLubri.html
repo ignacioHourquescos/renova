@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <title>combosLubri</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+
+  <script>
+     getProducts();
+
+    function  getProducts() {
+   //aca va el link de arriba a la derecha
+   
+   var id="1YIdMs0a6wazMivTSWY3ZkP0x_rm8LBgU0GV-H4jdFLM";
+   var sheet="1"
+
+   return new Promise((resolve) => {
+       fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
+           .then(response => response.json())
+           .then(data => data.feed.entry)
+           .then(data => ObjectConstructor(data))
+           .then(data => console.log(data))
+   })
+
+   }
+
+   const ObjectConstructor = (data) => {
+   let products ={}
+   let array = [];
+  
+   for (var i = 0; i < data.length; i++) {
+       
+       array.push({
+           "titulo":        data[i].gsx$comboExpress.$t,
+           "detalle":               data[i].gsx$titulo.$t,
+           "precioLista":            data[i].gsx$descripcion.$t,
+           // "dias": convertirFecha(data[i].gsx$fecha.$t)
+       })
+       if (i === data.length - 1) {
+           return (array)
+}}}
+
+
+
+  </script>
+  <body>
+
+  </body>
+</html>

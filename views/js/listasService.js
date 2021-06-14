@@ -12,6 +12,7 @@ function cargarListas () {
 			$(divCompetencia).find('.link2').each( function(){$( this ).attr("href",$( this ).attr("href")+data[i].codigo);});
 			$(divCompetencia).find('.titulo').text(data[i].descripcion);
 			$(divCompetencia).find('.mes').text(data[i].mes);
+			$(divCompetencia).find('.mes2').text(data[i].mes2);
 			$(divCompetencia).find('.aumento').text(data[i].aumento);
 			$(divCompetencia).find('.card').addClass('color'+idColor); 
 			$(".competencias").append(divCompetencia);
