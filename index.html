@@ -11,11 +11,10 @@
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179250562-1"></script>
 	<title>Renova - Distribuidora mayorista de filtros y lubricantes</title>
-	<meta name="description" 		content="Distribuidora Mayorista de filtros y lubricantes">
+	<meta name="description" 		content="Distribuidora mayorista de filtros y lubricantes. Atendemos Empresas, Industria y centros de mecánica Ligera. Stock permanente de FRAM, Motul, Valvoline. 40 años en el rubro. Sabemos!">
 	<meta name="google-site-verification" content="q-QFK8hbiU4TY9M5PLXbXHqhsffNgY5e-CRp5rctgrQ" />
 	<meta name="viewport" 			content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="keywords" 			content="filtros, lubricantes, filtros y aceites, todo en filtros, industria">
-	<meta name="author" 			content="John Doe">
 	<meta property="og:type" 		content="website" />
 	<meta property="og:title" 		content="Home - Renova" />
 	<meta property="og:description" content="Mayoristas de lubricantes y filtros" />
@@ -52,7 +51,7 @@
    <!-- End Google Tag Manager (noscript) -->
 	
 <!-- WPP BUTTON ================================================== -->
-<div id="WAButton" style="font-family: Arial, Helvetica, sans-serif; z-index:10;"></div>
+<div id="WAButton" style="font-family: Arial, Helvetica, sans-serif; z-index:1000;"></div>
 
 <!-- SIDE MENU================================================== -->
 <header>
@@ -99,12 +98,20 @@
 					<div class="row">
 			   			<div class="col-twelve">		   			
 							<img src="./views/images/logoRenova3.png" id="logo"  alt="">
-					
+
+
 						  	<div class="more animate-intro">
 
-								<a class="button stroke col-four columna" href="./views/html/listas.html">Lista de Precios</a>
-								<a class="button stroke col-four columna" href="./views/html/login.html">Ofertas</a> 
-								<a class="button stroke col-four columna" href="./views/html/faq.html">Quiero abrir un lubricentro</a>
+                       
+								<a class="button stroke col-four columna" href="./views/html/listas.html"> 
+                           <button style="all:unset" href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});">Listas</button>
+                        </a>
+								<a class="button stroke col-four columna" href="./views/html/login.html">
+                           <button style="all:unset" href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});">Articulos Destacados</button>
+                        </a> 
+								<a class="button stroke col-four columna" href="./views/html/faq.html">
+                           <button style="all:unset" href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});">Atencion Lubricentros</button>
+                        </a>
 							  </div>		
 							  <div style="width:100%">
 								<a href="#bloqueHeader"  class="arrow down"></a>
@@ -128,7 +135,7 @@
 <!-- LOGOS CARROUSEL
 ================================================== -->
 <div class="container-fluid carusel">
-	<img class="logo" alt="fram" src="views/images/logos/fram.png">
+	<img class="logo" alt="fram" src="views/images/logos/renova.png">
 	<img class="logo" alt="valvoline" src="views/images/logos/valvoline.png">
 	<img class="logo" alt="motul" src="views/images/logos/motul.png">
 	<img class="logo" alt="total" src="views/images/logos/total.png">
@@ -148,7 +155,7 @@
    	
    	<div class="row narrow section-intro with-bottom-sep animate-this">
    		<div class="col-full">
-   			<h1>Acerca de nosotros</h1>
+   			<h1>Filtros y lubricantes</h1>
 			<p class="lead" id="Nosotros"></p>  			
    	   </div> 
    	</div> 
@@ -214,6 +221,8 @@
 
 
 </section> <!-- end portfolio -->
+
+
 
 
 <!-- TESTIMONIALES
@@ -341,18 +350,36 @@
 
 		 	<div class="cinfo"><p>Dr. Adolfo Dickman 984<br>La Paternal, Ciudad Autonoma Buenos Aires<br></p></div> 
 	   		<div class="cinfo">
-	   			<h6>Nuestro mail</h6>
-	   			<p>info@distribuidorarenova.com<br></p>
+            
+               <button href="#" style="all:unset"  name="button1" onclick="dataLayer.push({'event': 'button1-click'});"></button>
+                  <a  style="border: 3px solid orange !important; padding:0.5rem; color:white" href="mailto:renovafiltros@gmail.com">CONTACTANOS VIA MAIL</a>  
+               </button>
+               <button href="#" style="all:unset;padding-top:1rem"   name="button1" onclick="dataLayer.push({'event': 'button1-click'});">
+                   <a   style="color:white;padding-top:1rem" href="mailto:renovafiltros@gmail.com">info@distribuidorarenova.com</a>  
+               </button>
 	   		</div> 
+
 	   		<div class="cinfo">
-	   			<button href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});"><h6>Llamanos</h6></button>
-	   		<p>11 4582-2887</p>
+
+
+               <button href="#" style="all:unset"  name="button1" onclick="dataLayer.push({'event': 'button1-click'})"></button>
+               <a  style="border: 3px solid orange!important; padding:0.5rem; color:white" href="mailto:renovafiltros@gmail.com">LLAMANOS</a> 
+               </button>
+            </br>
+            <button href="#" style="all:unset;padding-top:1rem"   name="button1" onclick="dataLayer.push({'event': 'button1-click'});">
+                <a   style="color:white;padding-top:1rem" href="mailto:renovafiltros@gmail.com">45822887</a>  
+            </button>
+	   			
 	   		</div>
 		</div>
    	</div>
 </section>
 
-
+<script>
+   function displayAlert(){
+      alert("Comuniquese via Mail")
+   }
+</script>
 <!-- footer
 ================================================== -->
 <footer>
@@ -435,3 +462,4 @@
 
 
 </html>
+
