@@ -120,7 +120,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
    <!-- End Google Tag Manager (noscript) -->
 	
 <!-- WPP BUTTON ================================================== -->
-<div id="WAButton" onclick="return gtag_report_conversion3('https://www.distribuidorarenova.com.ar/views/html/faq.html');" 
+<div id="WAButton" onclick="return gtag_report_conversion3();" 
 style="font-family: Arial, Helvetica, sans-serif; z-index:1000;"></div>
 
 <!-- SIDE MENU================================================== -->
@@ -383,7 +383,9 @@ style="font-family: Arial, Helvetica, sans-serif; z-index:1000;"></div>
 						 <fieldset class="pure-group"><input 	id="email" 		name="email" 	type="email" value="" 	placeholder="your.name@email.com"/></fieldset>
 
 						 <div class="form-field">
-							<button class="submitform">Enviar</button>
+                     <button href="#" style="all:unset"  name="button1" onclick="dataLayer.push({'event': 'button1-click'});"></button>
+                     <a  style="border: 3px solid orange !important; padding:0.5rem; color:white" href="mailto:renovafiltros@gmail.com">CONTACTANOS VIA MAIL</a>  
+                  </button>
 							<div id="submit-loader">
 								<div class="text-loader">Enviando</div>
 								<div class="s-loader">
@@ -424,9 +426,7 @@ style="font-family: Arial, Helvetica, sans-serif; z-index:1000;"></div>
 		 	<div class="cinfo"><p>Dr. Adolfo Dickman 984<br>La Paternal, Ciudad Autonoma Buenos Aires<br></p></div> 
 	   		<div class="cinfo">
             
-               <button href="#" style="all:unset"  name="button1" onclick="dataLayer.push({'event': 'button1-click'});"></button>
-                  <a  style="border: 3px solid orange !important; padding:0.5rem; color:white" href="mailto:renovafiltros@gmail.com">CONTACTANOS VIA MAIL</a>  
-               </button>
+
                <button href="#" style="all:unset;padding-top:1rem"   name="button1" onclick="dataLayer.push({'event': 'button1-click'});">
                    <a   style="color:white;padding-top:1rem" href="mailto:renovafiltros@gmail.com">info@distribuidorarenova.com</a>  
                </button>
