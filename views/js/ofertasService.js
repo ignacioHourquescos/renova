@@ -124,6 +124,22 @@ function cargarTotal() {
 	});
 }
 
+function cargarPuma() {
+	//busca en el backend todas las ofertas
+	$.getJSON(server+"/ofertasPuma", function (data) {
+		for (i = 0; i < data.length; i++) {
+			var divCompetencia = $(".puma").clone().removeClass("puma");
+    	  	$(divCompetencia).find('.titulo').text(data[i].id);
+			  $(divCompetencia).find('.detalle').text(data[i].d);
+			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
+    	  	$(".pumaOfertas").append(divCompetencia);
+		};
+      
+		// $("#plantilla13").remove();
+	});
+}
+
 
 function cargarSelenia() {
 	//busca en el backend todas las ofertas
@@ -238,3 +254,4 @@ cargarValvolineVarios();
 cargarOfertasVarias();
 cargarVinto();
 cargarRemateMercaderia();
+cargarPuma();
