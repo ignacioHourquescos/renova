@@ -131,7 +131,9 @@ function cargarPuma() {
 			var divCompetencia = $(".puma").clone().removeClass("puma");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 			  $(divCompetencia).find('.detalle').text(data[i].web);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+			  if(data[i].id.slice(-3)=="205") {
+            $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
+         }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".pumaOfertas").append(divCompetencia);
 		};
