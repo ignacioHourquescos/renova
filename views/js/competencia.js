@@ -1,8 +1,8 @@
 // Esta es la ip y puerto en que necesitamos que esté el backend disponible
 //const hostname = process.env.HOST || 'localhost:';
 //const port = process.env.PORT || 5000;
-var server ="http://localhost:5000";
-//var server="https://renovapp.herokuapp.com"
+//var server ="http://localhost:5000";
+var server="https://renovapp.herokuapp.com"
 
 function CompetenciasController () {
 //Carga las cards de las listas de precios

@@ -1,6 +1,6 @@
 // Al finalizarse de cargar el DOM:
 
-//var server ="http://localhost:5000";
+//var server ="http://";
 var server ="https://renovaapi.herokuapp.com";
 
 function cargarListas () {
