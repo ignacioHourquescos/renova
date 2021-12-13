@@ -1,8 +1,13 @@
 // Al finalizarse de cargar el DOM:
 
+<<<<<<< HEAD
 //var server ="http://localhost:5000";
  var server ="https://renovaapi.herokuapp.com";
 // var server ="http://localhost:5000";
+=======
+//var server ="http://";
+var server ="https://renovaapi.herokuapp.com";
+>>>>>>> listas
 
 function cargarListas () {
 	$.getJSON(server+"/listas", function (data) {

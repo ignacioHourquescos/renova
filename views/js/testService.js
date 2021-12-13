@@ -1,7 +1,7 @@
 // Al finalizarse de cargar el DOM:
 
-var server ="http://localhost:5000";
-
+//var server ="http://localhost:5000";
+var server ="https://renovaapi.herokuapp.com";
 function cargarOfertas () {
 	//busca en el backend todas las ofertas
 	$.getJSON(server+"/ofertas", function (data) {
