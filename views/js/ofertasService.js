@@ -117,7 +117,7 @@ function cargarTotal() {
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 			  $(divCompetencia).find('.detalle').text(data[i].d);
         // $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
-        $(divCompetencia).find('.precio').text("Consultar"));
+        $(divCompetencia).find('.precio').text("Consultar");
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".totalOfertas").append(divCompetencia);
 		};
