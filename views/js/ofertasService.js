@@ -66,7 +66,7 @@ function cargarValvoline () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".valvoline").clone().removeClass("valvoline");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-			  $(divCompetencia).find('.detalle').text(data[i].web);
+          $(divCompetencia).find('.detalle').text(data[i].d);
 			  if(data[i].id.substring(0,2)=="01") {
 				  $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
 			  }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
@@ -83,7 +83,7 @@ function cargarValvolineVarios () {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".valvolineVarios").clone().removeClass("valvolineVarios");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-		  	$(divCompetencia).find('.detalle').text(data[i].web);
+          $(divCompetencia).find('.detalle').text(data[i].web);
 			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".valvolineOfertasVarios").append(divCompetencia);
@@ -116,7 +116,8 @@ function cargarTotal() {
 			var divCompetencia = $(".total").clone().removeClass("total");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
 			  $(divCompetencia).find('.detalle').text(data[i].d);
-			$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+        // $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));
+        $(divCompetencia).find('.precio').text("Consultar");
 			$(divCompetencia).find('.imagenKit').attr("src",data[i].img);
     	  	$(".totalOfertas").append(divCompetencia);
 		};
@@ -130,7 +131,7 @@ function cargarPuma() {
 		for (i = 0; i < data.length; i++) {
 			var divCompetencia = $(".puma").clone().removeClass("puma");
     	  	$(divCompetencia).find('.titulo').text(data[i].id);
-			  $(divCompetencia).find('.detalle').text(data[i].web);
+          $(divCompetencia).find('.detalle').text(data[i].d);
 			  if(data[i].id.slice(-3)=="205") {
             $(divCompetencia).find('.precio').text("$"+(data[i].p*1.21).toFixed(0));
          }else {$(divCompetencia).find('.precio').text("$"+(data[i].p*1.21*0.9).toFixed(0));}
