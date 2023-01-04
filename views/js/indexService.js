@@ -28,7 +28,7 @@ const constantes = {
 //WHATSAPP FUNCTION
 $(function () {
 	$("#WAButton").floatingWhatsApp({
-		phone: "5491133528705", //WhatsApp Business phone number
+		phone: "5491144493873", //WhatsApp Business phone number
 		//headerTitle: 'Escribinos!', //Popup Title
 		//popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
 		showPopup: false, //Enables popup display
