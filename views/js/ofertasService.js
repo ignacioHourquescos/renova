@@ -170,7 +170,7 @@ function cargarPuma() {
 function cargarSelenia() {
 	//busca en el backend todas las ofertas
 	$.getJSON(server + "/ofertasSelenia", function (data) {
-		for (i = 0; i < data.length; i++) {
+		for (i = 1; i < data.length; i++) {
 			var divCompetencia = $(".selenia").clone().removeClass("selenia");
 			$(divCompetencia).find(".titulo").text(data[i].id);
 			$(divCompetencia).find(".detalle").text(data[i].web);
