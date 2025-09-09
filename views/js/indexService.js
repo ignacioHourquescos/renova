@@ -16,22 +16,29 @@ const constantes = {
 	descServicios2:
 		"Atencion a la industria y afines. Filtros y lubricantes para motores, compresores y generadores.",
 
-	tituloServicios3: "Filtros de aire tubulares y de habitáculo",
+	tituloServicios3: "INDUSTRIA",
 	descServicios3:
-		"Servicio de fabricación de filtros de aire especiales para maquinaria pesada",
-
-	tituloServicios4: "Asesoramiento tecnico",
-	descServicios4:
-		"Servicio de asesoramiento para la apertura de lubricentros. Facilidades en la compra inicial de mercaderia. ",
+		"Soluciones especializadas para la industria. Filtros y lubricantes de alta performance para maquinaria pesada, compresores industriales y equipos de gran exigencia.",
 };
 
 //WHATSAPP FUNCTION
 $(function () {
+	// Array of phone numbers for rotation
+	const phoneNumbers = [
+		"5491140565047", // LUCAS MOSTRADOR
+		"5491149606709", // GIGI
+		"5491165106333", // HEMAN
+	];
+
+	// Get a random phone number from the array
+	const randomIndex = Math.floor(Math.random() * phoneNumbers.length);
+	const selectedPhone = phoneNumbers[randomIndex];
+
 	$("#WAButton").floatingWhatsApp({
-		phone: "5491144493873", //WhatsApp Business phone number
+		phone: selectedPhone, //WhatsApp Business phone number (randomly selected)
 		//headerTitle: 'Escribinos!', //Popup Title
 		//popupMessage: 'Hola! en que te podemos ayudar?', //Popup Message
-		showPopup: true, //Enables popup display
+		showPopup: false, //Enables popup display
 		buttonImage: '<img src="views/images/whatsappModern.png" />', //Button Image
 		//headerColor: 'crimson', //Custom header color
 		//backgroundColor: 'crimson', //Custom background button color
@@ -52,7 +59,3 @@ inserstartextos("tituloServicios2", constantes.tituloServicios2);
 inserstartextos("descServicios2", constantes.descServicios2);
 inserstartextos("tituloServicios3", constantes.tituloServicios3);
 inserstartextos("descServicios3", constantes.descServicios3);
-inserstartextos("tituloServicios4", constantes.tituloServicios4);
-inserstartextos("descServicios4", constantes.descServicios4);
-
-window.onload = wpp();
