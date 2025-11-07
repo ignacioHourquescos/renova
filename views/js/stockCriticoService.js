@@ -1,5 +1,5 @@
 // Al finalizarse de cargar el DOM:
-var server = "https://renovaapi-heroku-20.herokuapp.com";
+var server = "https://renovaapi-production.up.railway.app";
 //var server ="http://localhost:5000";
 
 // var mm = String((new Date()).getMonth() + 1).padStart(2, '0');
@@ -33,36 +33,36 @@ var server = "https://renovaapi-heroku-20.herokuapp.com";
 // ventasMensuales(yyyy,mm);
 
 function obtenerListaArticulosBajoStock() {
-  $(document).ready(
-    $.getJSON(server + "/stock", function (data) {
-      console.log(data);
-      for (i = 0; i < data.length; i++) {
-        let unidadesVendidasPorMes = (data[i].unidades * 1.3).toFixed(0);
-        data[i].unidades = unidadesVendidasPorMes;
-        console.log(unidadesVendidasPorMes);
-        if (data[i].cant_stock == 0) {
-          data[i].cant_stock = 0;
-        }
+	$(document).ready(
+		$.getJSON(server + "/stock", function (data) {
+			console.log(data);
+			for (i = 0; i < data.length; i++) {
+				let unidadesVendidasPorMes = (data[i].unidades * 1.3).toFixed(0);
+				data[i].unidades = unidadesVendidasPorMes;
+				console.log(unidadesVendidasPorMes);
+				if (data[i].cant_stock == 0) {
+					data[i].cant_stock = 0;
+				}
 
-        data[i].stockCritico = (
-          unidadesVendidasPorMes / data[i].cant_stock
-        ).toFixed(2);
-        // if (data[i].stockCritico >= 0){
-        // 	data[i].stockCritico ="nada";
-        // } else{data[i].stockCritico}
-        // let ventaMensual[i]=data.resultado[i].unidades*1.30;
-        // let ratioStock=(data.resultado[i].unidades.toFixed(0);
-        // data.resultado[i].pf="$"+precioConIva;
-        // data.resultado[i].p="$"+data.resultado[i].p.toFixed(0);
-        // data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
-      }
+				data[i].stockCritico = (
+					unidadesVendidasPorMes / data[i].cant_stock
+				).toFixed(2);
+				// if (data[i].stockCritico >= 0){
+				// 	data[i].stockCritico ="nada";
+				// } else{data[i].stockCritico}
+				// let ventaMensual[i]=data.resultado[i].unidades*1.30;
+				// let ratioStock=(data.resultado[i].unidades.toFixed(0);
+				// data.resultado[i].pf="$"+precioConIva;
+				// data.resultado[i].p="$"+data.resultado[i].p.toFixed(0);
+				// data.resultado[i].s=convertirStockNumericoEnEscala(data.resultado[i].s);
+			}
 
-      $("table").bootstrapTable({
-        data: data.filter(filtrarcodigos),
-        //data:data
-      });
-    })
-  );
+			$("table").bootstrapTable({
+				data: data.filter(filtrarcodigos),
+				//data:data
+			});
+		})
+	);
 }
 
 obtenerListaArticulosBajoStock();

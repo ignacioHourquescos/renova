@@ -1,7 +1,7 @@
 // Al finalizarse de cargar el DOM:
 
 //var server ="http://";
-var server = "https://renovaapi-heroku-20.herokuapp.com";
+var server = "https://renovaapi-production.up.railway.app";
 
 function cargarListas() {
 	$.getJSON(server + "/listas", function (data) {
@@ -17,7 +17,7 @@ function cargarListas() {
 					$(this).attr("href", $(this).attr("href") + data[i].codigo);
 				});
 			$(divCompetencia).find(".titulo").text(data[i].descripcion);
-			$(divCompetencia).find(".mes").text(data[i].mes);
+
 			$(divCompetencia)
 				.find(".card")
 				.addClass("color" + idColor);
