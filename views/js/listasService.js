@@ -1,7 +1,7 @@
 // Al finalizarse de cargar el DOM:
 
 //var server ="http://";
-var server = "https://renovaapi-heroku-20.herokuapp.com";
+var server = "https://renovaapi-production.up.railway.app";
 
 function cargarListas() {
 	$.getJSON(server + "/listas", function (data) {

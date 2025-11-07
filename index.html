@@ -35,6 +35,8 @@
       <meta name="twitter:title" content="Renova">
       <meta name="twitter:description" content="Mayoristas de lubricantes y filtros">
       <meta name="twitter:image" content="https://www.distribuidorarenova.com.ar/views/images/fondoNaranja.jpg">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
       <link rel="stylesheet" href="./views/css/base.css">
       <link rel="stylesheet" href="./views/css/vendor.css">
       <link rel="stylesheet" href="./views/css/main.css">
@@ -42,16 +44,17 @@
       <link rel="stylesheet" href="./views/css/index.css">
       <link rel="stylesheet" href="./views/css/carrousel.css">
       <link rel="stylesheet" href="./views/css/galeria.css">
-      <link rel="stylesheet"
-            href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+      <!-- Removed floating-whatsapp CSS -->
       <link rel="icon" type="image/png" href="/views/images/fondoNaranja.jpg" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
       <!-- <script src="./views/js/src/modernizr.js"></script> -->
       <!-- <script src="./views/js/src/pace.min.js"></script> -->
       <script src="./views/js/carusel.js"></script>
-      <script type="text/javascript"
-            src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+      <!-- Removed floating-whatsapp JS -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1JPEQDK18"></script>
       <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-R1JPEQDK18');</script>
       <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-179250562-1');</script>
@@ -136,8 +139,40 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       <!-- End Google Tag Manager (noscript) -->
 
       <!-- WPP BUTTON ================================================== -->
-      <div id="WAButton" onclick="return gtag_report_conversion3();"
-            style="font-family: Arial, Helvetica, sans-serif; z-index:1000;"></div>
+      <div id="customWhatsAppBtn" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer;">
+            <div class="whatsapp-button-inner"
+                  style="background-color: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)';"
+                  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF">
+                        <path
+                              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.87.116-.174.232-.09.428.086.195.384.829.826 1.342.567.678 1.04 1.028 1.188 1.102.148.074.237.037.324-.055.087-.093.374-.435.474-.582.1-.148.201-.126.336-.076s.881.407 1.032.484c.151.077.249.116.287.179.038.063.038.362-.106.711z" />
+                  </svg>
+            </div>
+            <!-- Pulse effect -->
+            <div
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background-color: #25D366; opacity: 0.7; animation: pulse 2s infinite; pointer-events: none;">
+            </div>
+      </div>
+
+      <style>
+            @keyframes pulse {
+                  0% {
+                        transform: scale(1);
+                        opacity: 0.7;
+                  }
+
+                  70% {
+                        transform: scale(1.3);
+                        opacity: 0;
+                  }
+
+                  100% {
+                        transform: scale(1.3);
+                        opacity: 0;
+                  }
+            }
+      </style>
 
       <!-- SIDE MENU================================================== -->
       <header>
@@ -342,12 +377,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
       </section>
 
-      <!-- INDUSTRIA SECTION
+      <!-- SOLUCIONES SECTION
 ================================================== -->
-      <section id="industria"
-            style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); padding: 80px 0; color: white; position: relative; overflow: hidden;">
+      <!-- TRANSPORTE SECTION -->
+      <section id="transporte"
+            style="background: linear-gradient(135deg, #CE750B 0%, #b86a0a 100%); padding: 80px 0; color: white; position: relative; overflow: hidden;">
             <div
-                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('views/images/industria.jpg') center/cover; opacity: 0.4; z-index: 0;">
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('views/images/transporte.jpg') center/cover; opacity: 0.4; z-index: 0;">
             </div>
             <div
                   style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 1;">
@@ -356,35 +392,188 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="row section-intro" style="position: relative; z-index: 2;">
                   <div class="col-full">
                         <h1
-                              style="color: white; text-align: center; margin-bottom: 40px; font-size: 4.5rem; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.1; letter-spacing: -1px;">
-                              Soluciones para la Industria
+                              style="color: white; text-align: center; margin-bottom: 40px; font-size: 4rem; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.1; letter-spacing: -1px;">
+                              Todo lo que tu flota necesita
                         </h1>
                         <p
                               style="text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 40px; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.6; color: rgba(255,255,255,0.95);">
-                              Proveemos filtros y lubricantes especializados para la industria. Contamos con productos
-                              de alta calidad
-                              para maquinaria pesada, compresores, generadores y equipos industriales. Asesoramiento
-                              técnico especializado
-                              y soporte continuo para maximizar el rendimiento de sus equipos.
+                              Tu empresa de transporte necesita que los vehículos funcionen sin problemas. Tenemos todos
+                              los filtros y lubricantes para mantener tu flota en movimiento.
                         </p>
+                        <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px;">
+                              <ul
+                                    style="font-size: 18px; margin-bottom: 40px; list-style-type: disc; padding-left: 20px;">
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Filtros
+                                          para camiones, buses y vehículos comerciales</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Aceites y
+                                          lubricantes para motores diésel</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Productos
+                                          para cajas de cambio y diferenciales</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Grasas
+                                          para mantenimiento general</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Asesoramiento para elegir el producto correcto</li>
+                              </ul>
+                        </div>
                   </div>
             </div>
 
             <div class="row" style="text-align: center; position: relative; z-index: 2;">
                   <div class="col-full">
-                        <div
-                              style="background: linear-gradient(135deg, rgba(243, 156, 18, 0.8) 0%, rgba(230, 126, 34, 0.9) 100%); padding: 40px; border-radius: 15px; backdrop-filter: blur(10px); margin: 0 auto; max-width: 600px; box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.4); overflow: hidden;">
-                              <h3 style="color: white; margin-bottom: 20px;">¿Necesita una cotización personalizada?
-                              </h3>
-                              <p style="color: white; margin-bottom: 30px;">
-                                    Nuestro equipo técnico está listo para asesorarle en la selección de productos
-                                    específicos para su industria.
-                              </p>
-                              <a href="https://wa.me/5491144075850" target="_blank"
-                                    style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #e67e22; padding: 18px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease; border: 2px solid white; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 2px 8px rgba(243, 156, 18, 0.3);">
-                                    Solicitar Cotización
-                              </a>
+                        <a href="https://wa.me/5491144075850" target="_blank"
+                              style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #CE750B; padding: 18px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease; border: 2px solid white; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 2px 8px rgba(206, 117, 11, 0.3);">
+                              Consultanos
+                        </a>
+                  </div>
+            </div>
+      </section>
+
+      <!-- AGRO SECTION -->
+      <section id="agro"
+            style="background: linear-gradient(135deg, #CFF27E 0%, #b8d969 100%); padding: 80px 0; color: #333; position: relative; overflow: hidden;">
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('views/images/agro.jpg') center/cover; opacity: 0.4; z-index: 0;">
+            </div>
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+            </div>
+
+            <div class="row section-intro" style="position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <h1
+                              style="color: white; text-align: center; margin-bottom: 40px; font-size: 4rem; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.1; letter-spacing: -1px;">
+                              Filtros y lubricantes para el campo
+                        </h1>
+                        <p
+                              style="text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 40px; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.6; color: rgba(255,255,255,0.95);">
+                              El trabajo agrícola es exigente. Tractores, cosechadoras y equipos de campo necesitan
+                              productos que aguanten las condiciones más duras. Distribuimos todo lo necesario para que
+                              tu maquinaria funcione toda la temporada.
+                        </p>
+                        <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px;">
+                              <ul
+                                    style="font-size: 18px; margin-bottom: 40px; list-style-type: disc; padding-left: 20px; color: white;">
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Filtros
+                                          de aire, aceite y combustible para maquinaria agrícola</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Aceites
+                                          motor para tractores y cosechadoras</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Lubricantes hidráulicos para implementos</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Grasas
+                                          resistentes para rodamientos y articulaciones</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Refrigerantes para motores</li>
+                              </ul>
                         </div>
+                  </div>
+            </div>
+
+            <div class="row" style="text-align: center; position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <a href="https://wa.me/5491144075850" target="_blank"
+                              style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #7d9534; padding: 18px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease; border: 2px solid white; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 2px 8px rgba(207, 242, 126, 0.3);">
+                              Consultanos
+                        </a>
+                  </div>
+            </div>
+      </section>
+
+      <!-- INDUSTRIA SECTION -->
+      <section id="industria"
+            style="background: linear-gradient(135deg, #E1DEE3 0%, #c5c2c7 100%); padding: 80px 0; color: #333; position: relative; overflow: hidden;">
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('views/images/industria.jpg') center/cover; opacity: 0.4; z-index: 0;">
+            </div>
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 1;">
+            </div>
+
+            <div class="row section-intro" style="position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <h1
+                              style="color: white; text-align: center; margin-bottom: 40px; font-size: 4rem; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.1; letter-spacing: -1px;">
+                              Filtros y lubricantes para la industria
+                        </h1>
+                        <p
+                              style="text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 40px; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.6; color: rgba(255,255,255,0.95);">
+                              Las plantas industriales y fábricas necesitan equipos que funcionen sin interrupciones.
+                              Distribuimos filtros y lubricantes para todo tipo de maquinaria industrial y sistemas
+                              productivos.
+                        </p>
+                        <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px;">
+                              <ul
+                                    style="font-size: 18px; margin-bottom: 40px; list-style-type: disc; padding-left: 20px; color: white;">
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Filtros
+                                          industriales para aire comprimido y sistemas hidráulicos</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Aceites
+                                          para compresores y reductores</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Lubricantes para maquinaria pesada y líneas de producción</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Grasas
+                                          industriales para rodamientos y engranajes</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Fluidos
+                                          hidráulicos y refrigerantes</li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="row" style="text-align: center; position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <a href="https://wa.me/5491144075850" target="_blank"
+                              style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #7a767c; padding: 18px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease; border: 2px solid white; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 2px 8px rgba(225, 222, 227, 0.3);">
+                              Consultanos
+                        </a>
+                  </div>
+            </div>
+      </section>
+
+      <!-- LUBRICENTROS SECTION -->
+      <section id="lubricentros"
+            style="background: linear-gradient(135deg, #077187 0%, #065b6c 100%); padding: 80px 0; color: white; position: relative; overflow: hidden;">
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('views/images/lubricentro.jpg') center/cover; opacity: 0.4; z-index: 0;">
+            </div>
+            <div
+                  style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 1;">
+            </div>
+
+            <div class="row section-intro" style="position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <h1
+                              style="color: white; text-align: center; margin-bottom: 40px; font-size: 4rem; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.1; letter-spacing: -1px;">
+                              Todo para tu lubricentro
+                        </h1>
+                        <p
+                              style="text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 40px; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.6; color: rgba(255,255,255,0.95);">
+                              Si tenés un lubricentro, sabés que necesitás variedad de productos y stock confiable.
+                              Distribuimos la gama completa de filtros y lubricantes para que puedas atender a todos tus
+                              clientes.
+                        </p>
+                        <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px;">
+                              <ul
+                                    style="font-size: 18px; margin-bottom: 40px; list-style-type: disc; padding-left: 20px;">
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Aceites
+                                          multigrado para autos y motos</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Filtros
+                                          de aceite, aire y combustible para todas las marcas</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Lubricantes para transmisiones automáticas y manuales</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+                                          Refrigerantes y líquidos de frenos</li>
+                                    <li style="margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Grasas
+                                          multipropósito</li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="row" style="text-align: center; position: relative; z-index: 2;">
+                  <div class="col-full">
+                        <a href="https://wa.me/5491144075850" target="_blank"
+                              style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #077187; padding: 18px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease; border: 2px solid white; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 2px 8px rgba(7, 113, 135, 0.3);">
+                              Consultanos
+                        </a>
                   </div>
             </div>
       </section>
