@@ -111,3 +111,432 @@
     background:rgb(2, 0, 15);
   }
 
+
+/* ===== Home services redesign ===== */
+#services {
+  position: relative;
+  overflow: hidden;
+}
+
+#services .services-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+#services .services-header {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+#services .services-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f9a828;
+  margin-bottom: 1rem;
+}
+
+#services .services-header h1 {
+  font-size: 3.6rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+#services .services-header p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+#services .service-card {
+  background: rgba(22, 22, 24, 0.72);
+  border: 1px solid rgba(249, 168, 40, 0.18);
+  border-radius: 18px;
+  padding: 3rem 2.6rem;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#services .service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 35px 60px rgba(249, 168, 40, 0.25);
+  border-color: rgba(249, 168, 40, 0.5);
+}
+
+#services .service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(249, 168, 40, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9a828;
+  font-size: 2.6rem;
+}
+
+#services .service-card h3 {
+  font-size: 2.1rem;
+  line-height: 1.3;
+  margin: 0;
+  color: #ffffff;
+}
+
+#services .service-card p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.76);
+  margin: 0;
+}
+
+#services .service-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+
+#services .service-highlights li {
+  position: relative;
+  padding-left: 2.4rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#services .service-highlights li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f9a828;
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+
+#services .services-cta {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+#services .services-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 3.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f9a828 0%, #e67e22 100%);
+  color: #131313;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 40px rgba(249, 168, 40, 0.35);
+}
+
+#services .services-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 44px rgba(249, 168, 40, 0.45);
+}
+
+#services .services-button:focus {
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(249, 168, 40, 0.4);
+}
+
+@media only screen and (max-width: 1024px) {
+  #services .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #services .services-wrapper {
+    padding: 4rem 1.8rem 2.6rem;
+  }
+
+  #services .services-header h1 {
+    font-size: 3.1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #services .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #services .service-card {
+    padding: 2.6rem 2.2rem;
+  }
+
+  #services .services-button {
+    width: 100%;
+  }
+}
+
+/* ===== Segment sections (transporte, agro, industria, lubricentros) ===== */
+.segment {
+  position: relative;
+  padding: 110px 0 120px;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  --accent-color: #f9a828;
+  --accent-color-rgb: 249, 168, 40;
+  --overlay-gradient: linear-gradient(135deg, rgba(18, 18, 18, 0.85) 0%, rgba(6, 6, 6, 0.92) 100%);
+}
+
+.segment::before,
+.segment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.segment::before {
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  transform: scale(1.04);
+}
+
+.segment::after {
+  background: var(--overlay-gradient);
+  opacity: 0.95;
+}
+
+.segment__content {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.segment__title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+  margin: 0;
+}
+
+.segment__subtitle {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  max-width: 760px;
+}
+
+.segment__card {
+  width: 100%;
+  max-width: 780px;
+  padding: 2.6rem 3.2rem;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid rgba(var(--accent-color-rgb), 0.35);
+  background: rgba(12, 12, 16, 0.82);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.segment__card::before {
+  content: "";
+  position: absolute;
+  inset: -80px -20%;
+  opacity: 0.25;
+  background: radial-gradient(circle at center, rgba(var(--accent-color-rgb), 0.35), transparent 70%);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+.segment__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.segment__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.6rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.segment__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(var(--accent-color-rgb), 0.16);
+  color: var(--accent-color);
+  font-size: 1.75rem;
+  box-shadow: 0 10px 25px rgba(var(--accent-color-rgb), 0.3), 0 0 0 1px rgba(var(--accent-color-rgb), 0.45) inset;
+}
+
+.segment__text {
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.segment__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  text-decoration: none;
+  color: #0f0f0f;
+  background: linear-gradient(135deg, var(--accent-color) 0%, rgba(var(--accent-color-rgb), 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 38px rgba(var(--accent-color-rgb), 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.segment__cta:hover,
+.segment__cta:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 44px rgba(var(--accent-color-rgb), 0.45);
+  color: #0f0f0f;
+}
+
+.segment--transport {
+  --accent-color: #f5a646;
+  --accent-color-rgb: 245, 166, 70;
+  --overlay-gradient: linear-gradient(135deg, rgba(28, 15, 4, 0.9) 0%, rgba(11, 7, 3, 0.92) 100%);
+}
+
+.segment--transport::before {
+  background-image: url("../images/transporte.jpg");
+}
+
+.segment--agro {
+  --accent-color: #bde65a;
+  --accent-color-rgb: 189, 230, 90;
+  --overlay-gradient: linear-gradient(135deg, rgba(15, 41, 9, 0.88) 0%, rgba(12, 24, 7, 0.94) 100%);
+}
+
+.segment--agro::before {
+  background-image: url("../images/agro.jpg");
+}
+
+.segment--industry {
+  --accent-color: #d4c4ff;
+  --accent-color-rgb: 212, 196, 255;
+  --overlay-gradient: linear-gradient(135deg, rgba(20, 18, 26, 0.9) 0%, rgba(15, 13, 20, 0.94) 100%);
+}
+
+.segment--industry::before {
+  background-image: url("../images/industria.jpg");
+}
+
+.segment--workshop {
+  --accent-color: #5dd6f4;
+  --accent-color-rgb: 93, 214, 244;
+  --overlay-gradient: linear-gradient(135deg, rgba(3, 24, 32, 0.9) 0%, rgba(2, 16, 23, 0.94) 100%);
+}
+
+.segment--workshop::before {
+  background-image: url("../images/lubricentro.jpg");
+}
+
+@media only screen and (max-width: 960px) {
+  .segment {
+    padding: 90px 0 100px;
+  }
+
+  .segment__title {
+    font-size: 3.2rem;
+  }
+
+  .segment__subtitle {
+    font-size: 1.65rem;
+  }
+
+  .segment__card {
+    padding: 2.4rem 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .segment__content {
+    gap: 2rem;
+  }
+
+  .segment__card {
+    padding: 2.2rem;
+  }
+
+  .segment__item {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .segment__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
+  }
+
+  .segment__text {
+    font-size: 1.5rem;
+  }
+
+  .segment__cta {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .segment {
+    padding: 80px 0 90px;
+  }
+
+  .segment__title {
+    font-size: 2.8rem;
+  }
+
+  .segment__subtitle {
+    font-size: 1.55rem;
+  }
+}
